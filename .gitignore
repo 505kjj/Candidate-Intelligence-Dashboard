@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env*
+frontend/.next-dev*.log
+
+# Challenge data and generated outputs
+data/candidates.jsonl
+data/*.jsonl
+!data/sample_candidates.jsonl
+data/*.zip
+data/*.json
+outputs/*.csv
+outputs/*.json
+!outputs/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
