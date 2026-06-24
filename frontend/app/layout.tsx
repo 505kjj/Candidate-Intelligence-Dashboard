@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <div className="pointer-events-none fixed inset-0 soft-grid opacity-60" />
         <Nav />
         <main className="relative z-10">{children}</main>

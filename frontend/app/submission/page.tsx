@@ -1,5 +1,6 @@
 import { CheckCircle2, FileJson, Github, TerminalSquare } from "lucide-react";
 import type { ReactNode } from "react";
+import { SubmissionClient } from "@/components/SubmissionClient";
 
 const checks = [
   "Run backend ranking on ./data/candidates.jsonl",
@@ -19,6 +20,7 @@ export default function SubmissionPage() {
       </div>
       <div className="grid gap-6 lg:grid-cols-[1fr_0.8fr]">
         <div className="space-y-6">
+          <SubmissionClient />
           <Command
             icon={<TerminalSquare />}
             title="Ranking Command"

@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { ArrowRight, FileText, ShieldCheck, Sparkles } from "lucide-react";
+import { ShieldCheck, Sparkles } from "lucide-react";
 import { SignalRings } from "@/components/SignalRings";
+import { LandingActions } from "@/components/LandingActions";
 
 export default function Home() {
   return (
@@ -19,22 +19,7 @@ export default function Home() {
         <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-400">
           An explainable AI ranking engine that understands job context, career evidence, and behavioral hiring signals.
         </p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="/dashboard"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-cyan px-5 py-3 font-semibold text-ink transition hover:bg-cyan/90"
-          >
-            View Shortlist
-            <ArrowRight size={18} />
-          </Link>
-          <Link
-            href="/methodology"
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 font-semibold text-white transition hover:bg-white/10"
-          >
-            See Methodology
-            <FileText size={18} />
-          </Link>
-        </div>
+        <LandingActions />
         <div className="mt-10 grid gap-3 sm:grid-cols-3">
           {[
             ["Hybrid ranker", "TF-IDF plus explicit evidence"],

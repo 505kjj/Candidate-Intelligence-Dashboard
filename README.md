@@ -94,13 +94,21 @@ npm install
 npm run dev
 ```
 
-The dashboard reads:
+Open:
 
 ```text
-../outputs/top_candidates.json
+http://localhost:3000
 ```
 
-If that file is missing, it shows polished demo data and displays: `Demo data shown. Run backend ranking to load real results.`
+The frontend includes local server API routes that connect the UI to the Python ranking engine:
+
+- `GET /api/shortlist-status` checks whether `outputs/submission.csv` and `outputs/top_candidates.json` exist, counts JSON candidates, and returns modified times.
+- `POST /api/run-ranking` runs the backend command from the project root.
+- `GET /api/candidates` returns `outputs/top_candidates.json`, or demo data if outputs are missing.
+- `GET /api/download/submission` downloads `outputs/submission.csv`.
+- `GET /api/download/top-candidates` downloads `outputs/top_candidates.json`.
+
+Because `/api/run-ranking` starts a local Python process, this integration is intended for local demo/server deployments. It will not work on static-only hosting unless the Python backend is hosted separately.
 
 ## Frontend Pages
 
@@ -119,12 +127,29 @@ Ranking uses local Python code and scikit-learn TF-IDF only. It does not call Op
 
 ```bash
 python -m pip install -r requirements.txt
-python backend/rank.py --candidates ./data/sample_candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json
-python validate_submission.py ./outputs/submission.csv
 cd frontend
 npm install
 npm run dev
 ```
+
+Then open `http://localhost:3000`.
+
+Frontend flow:
+
+1. Click `View Shortlist`.
+2. If outputs exist, the app opens `/dashboard`.
+3. If outputs are missing, the app shows `No shortlist found. Run Discovery to generate ranked candidates.`
+4. Click `Run Discovery` to call `/api/run-ranking`.
+5. The API runs:
+
+```bash
+python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json
+```
+
+6. After success, the dashboard loads real candidates from `outputs/top_candidates.json`.
+7. Use the dashboard or submission page download buttons for `submission.csv` and `top_candidates.json`.
+
+If `data/candidates.jsonl` is not present, `/api/run-ranking` returns a clear error asking you to place the organiser dataset at `data/candidates.jsonl`. The dashboard still works with demo data through `/api/candidates`.
 
 ## GitHub Submission Checklist
 

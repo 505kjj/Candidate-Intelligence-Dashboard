@@ -1,16 +1,56 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowUpDown, Eye, Search, SlidersHorizontal } from "lucide-react";
-import type { Candidate } from "@/lib/candidates";
+import { ArrowDownToLine, ArrowUpDown, Eye, Loader2, PlayCircle, Search, SlidersHorizontal } from "lucide-react";
+import type { Candidate, CandidatesResponse } from "@/lib/candidates";
 
-export function DashboardClient({ candidates, isDemo }: { candidates: Candidate[]; isDemo: boolean }) {
+export function DashboardClient() {
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
+  const [isDemo, setIsDemo] = useState(true);
+  const [message, setMessage] = useState("Loading candidates...");
+  const [loading, setLoading] = useState(true);
+  const [running, setRunning] = useState(false);
   const [query, setQuery] = useState("");
   const [risk, setRisk] = useState("All");
   const [scoreMin, setScoreMin] = useState(0);
   const [experienceMin, setExperienceMin] = useState(0);
   const [openOnly, setOpenOnly] = useState(false);
+
+  async function loadCandidates() {
+    setLoading(true);
+    const response = await fetch("/api/candidates", { cache: "no-store" });
+    const payload = (await response.json()) as CandidatesResponse;
+    setCandidates(payload.candidates);
+    setIsDemo(payload.demo);
+    setMessage(payload.message);
+    setLoading(false);
+  }
+
+  async function runDiscovery() {
+    setRunning(true);
+    setMessage("Ranking candidates and generating outputs...");
+    try {
+      const response = await fetch("/api/run-ranking", { method: "POST" });
+      const payload = await response.json();
+      if (!response.ok || !payload.success) {
+        throw new Error(payload.message || payload.error || "Ranking failed.");
+      }
+      setMessage("Shortlist generated successfully.");
+      await loadCandidates();
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Ranking failed.");
+    } finally {
+      setRunning(false);
+    }
+  }
+
+  useEffect(() => {
+    loadCandidates().catch(() => {
+      setLoading(false);
+      setMessage("Unable to load candidate data.");
+    });
+  }, []);
 
   const filtered = useMemo(() => {
     const low = query.toLowerCase();
@@ -28,11 +68,34 @@ export function DashboardClient({ candidates, isDemo }: { candidates: Candidate[
 
   return (
     <div>
-      {isDemo && (
-        <div className="mb-6 rounded-lg border border-cyan/25 bg-cyan/10 px-4 py-3 text-sm text-cyan">
-          Demo data shown. Run backend ranking to load real results.
-        </div>
-      )}
+      <div className={`mb-6 rounded-lg border px-4 py-3 text-sm ${isDemo ? "border-cyan/25 bg-cyan/10 text-cyan" : "border-emerald-400/25 bg-emerald-400/10 text-emerald-300"}`}>
+        {loading ? "Loading candidates..." : message}
+      </div>
+      <div className="mb-6 flex flex-col gap-3 sm:flex-row">
+        <button
+          type="button"
+          onClick={runDiscovery}
+          disabled={running}
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-cyan px-4 py-3 font-semibold text-ink transition hover:bg-cyan/90 disabled:cursor-wait disabled:opacity-70"
+        >
+          {running ? <Loader2 className="animate-spin" size={18} /> : <PlayCircle size={18} />}
+          Run Discovery
+        </button>
+        <a
+          href="/api/download/submission"
+          className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-3 font-semibold text-white transition hover:bg-white/10"
+        >
+          <ArrowDownToLine size={18} />
+          Download submission.csv
+        </a>
+        <a
+          href="/api/download/top-candidates"
+          className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-3 font-semibold text-white transition hover:bg-white/10"
+        >
+          <ArrowDownToLine size={18} />
+          Download top_candidates.json
+        </a>
+      </div>
       <div className="glass mb-6 rounded-lg p-4">
         <div className="grid gap-3 lg:grid-cols-[1.5fr_0.8fr_0.8fr_0.8fr_auto]">
           <label className="relative">
@@ -123,6 +186,11 @@ export function DashboardClient({ candidates, isDemo }: { candidates: Candidate[
               </Link>
             </article>
           ))}
+          {!filtered.length && (
+            <div className="px-5 py-10 text-center text-slate-400">
+              No candidates match the current filters.
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -22,7 +22,24 @@ export type Candidate = {
   };
 };
 
-const demoCandidates: Candidate[] = [
+export type ShortlistStatus = {
+  submissionExists: boolean;
+  jsonExists: boolean;
+  ready: boolean;
+  candidateCount: number;
+  submissionModifiedAt: string | null;
+  jsonModifiedAt: string | null;
+  submissionPath: string;
+  jsonPath: string;
+};
+
+export type CandidatesResponse = {
+  demo: boolean;
+  message: string;
+  candidates: Candidate[];
+};
+
+export const demoCandidates: Candidate[] = [
   {
     candidate_id: "DEMO_0001",
     rank: 1,
@@ -115,10 +132,24 @@ const demoCandidates: Candidate[] = [
   }
 ];
 
-export function getCandidates(): { candidates: Candidate[]; isDemo: boolean } {
-  const outputPath = path.resolve(process.cwd(), "..", "outputs", "top_candidates.json");
+export const projectRoot = path.resolve(process.cwd(), "..");
+export const outputPaths = {
+  submission: path.join(projectRoot, "outputs", "submission.csv"),
+  topCandidates: path.join(projectRoot, "outputs", "top_candidates.json"),
+  candidates: path.join(projectRoot, "data", "candidates.jsonl")
+};
+
+function modifiedAt(filePath: string): string | null {
   try {
-    const raw = fs.readFileSync(outputPath, "utf-8");
+    return fs.statSync(filePath).mtime.toISOString();
+  } catch {
+    return null;
+  }
+}
+
+export function getCandidates(): { candidates: Candidate[]; isDemo: boolean } {
+  try {
+    const raw = fs.readFileSync(outputPaths.topCandidates, "utf-8");
     const parsed = JSON.parse(raw) as Candidate[];
     if (Array.isArray(parsed) && parsed.length > 0) {
       return { candidates: parsed, isDemo: false };
@@ -132,4 +163,41 @@ export function getCandidates(): { candidates: Candidate[]; isDemo: boolean } {
 export function getCandidateById(id: string): { candidate?: Candidate; isDemo: boolean } {
   const { candidates, isDemo } = getCandidates();
   return { candidate: candidates.find((candidate) => candidate.candidate_id === id), isDemo };
+}
+
+export function getShortlistStatus(): ShortlistStatus {
+  const submissionExists = fs.existsSync(outputPaths.submission);
+  const jsonExists = fs.existsSync(outputPaths.topCandidates);
+  let candidateCount = 0;
+
+  if (jsonExists) {
+    try {
+      const parsed = JSON.parse(fs.readFileSync(outputPaths.topCandidates, "utf-8"));
+      candidateCount = Array.isArray(parsed) ? parsed.length : 0;
+    } catch {
+      candidateCount = 0;
+    }
+  }
+
+  return {
+    submissionExists,
+    jsonExists,
+    ready: submissionExists && jsonExists && candidateCount > 0,
+    candidateCount,
+    submissionModifiedAt: modifiedAt(outputPaths.submission),
+    jsonModifiedAt: modifiedAt(outputPaths.topCandidates),
+    submissionPath: "outputs/submission.csv",
+    jsonPath: "outputs/top_candidates.json"
+  };
+}
+
+export function getCandidatesResponse(): CandidatesResponse {
+  const { candidates, isDemo } = getCandidates();
+  return {
+    demo: isDemo,
+    message: isDemo
+      ? "Demo data shown. Run backend ranking to load real results."
+      : "Real ranked shortlist loaded from outputs/top_candidates.json.",
+    candidates
+  };
 }
