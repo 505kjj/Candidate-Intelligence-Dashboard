@@ -2,8 +2,9 @@ import Link from "next/link";
 import { BarChart3, BrainCircuit } from "lucide-react";
 
 const links = [
-  { href: "/dashboard", label: "Shortlist" },
-  { href: "/job", label: "Job" },
+  { href: "/", label: "Home" },
+  { href: "/job", label: "Job Intelligence" },
+  { href: "/dashboard", label: "Dashboard" },
   { href: "/methodology", label: "Methodology" },
   { href: "/submission", label: "Submission" }
 ];
@@ -20,7 +21,7 @@ export function Nav() {
             Candidate Intelligence Dashboard
           </span>
         </Link>
-        <nav className="hidden items-center gap-2 md:flex">
+        <nav className="hidden items-center gap-2 lg:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -39,6 +40,17 @@ export function Nav() {
           <span className="hidden sm:inline">View Shortlist</span>
         </Link>
       </div>
+      <nav className="mx-auto flex max-w-7xl gap-2 overflow-x-auto px-4 pb-3 sm:px-6 lg:hidden lg:px-8">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="shrink-0 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-slate-300 transition hover:bg-white/10 hover:text-white"
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }

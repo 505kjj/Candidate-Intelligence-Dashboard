@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ArrowDownToLine, ArrowUpDown, Eye, Loader2, PlayCircle, Search, SlidersHorizontal } from "lucide-react";
 import type { Candidate, CandidatesResponse } from "@/lib/candidates";
 
+type SortMode = "score-desc" | "rank-asc";
+
 export function DashboardClient() {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [isDemo, setIsDemo] = useState(true);
@@ -14,8 +16,11 @@ export function DashboardClient() {
   const [query, setQuery] = useState("");
   const [risk, setRisk] = useState("All");
   const [scoreMin, setScoreMin] = useState(0);
+  const [scoreMax, setScoreMax] = useState(100);
   const [experienceMin, setExperienceMin] = useState(0);
+  const [experienceMax, setExperienceMax] = useState(20);
   const [openOnly, setOpenOnly] = useState(false);
+  const [sortMode, setSortMode] = useState<SortMode>("score-desc");
 
   async function loadCandidates() {
     setLoading(true);
@@ -61,10 +66,17 @@ export function DashboardClient() {
       })
       .filter((candidate) => risk === "All" || candidate.risk_level === risk)
       .filter((candidate) => candidate.score >= scoreMin)
+      .filter((candidate) => candidate.score <= scoreMax)
       .filter((candidate) => candidate.experience_years >= experienceMin)
+      .filter((candidate) => candidate.experience_years <= experienceMax)
       .filter((candidate) => !openOnly || candidate.behavioral_signals.open_to_work)
-      .sort((a, b) => b.score - a.score || a.candidate_id.localeCompare(b.candidate_id));
-  }, [candidates, experienceMin, openOnly, query, risk, scoreMin]);
+      .sort((a, b) => {
+        if (sortMode === "rank-asc") {
+          return a.rank - b.rank || a.candidate_id.localeCompare(b.candidate_id);
+        }
+        return b.score - a.score || a.rank - b.rank || a.candidate_id.localeCompare(b.candidate_id);
+      });
+  }, [candidates, experienceMax, experienceMin, openOnly, query, risk, scoreMax, scoreMin, sortMode]);
 
   return (
     <div>
@@ -97,7 +109,7 @@ export function DashboardClient() {
         </a>
       </div>
       <div className="glass mb-6 rounded-lg p-4">
-        <div className="grid gap-3 lg:grid-cols-[1.5fr_0.8fr_0.8fr_0.8fr_auto]">
+        <div className="grid gap-3 xl:grid-cols-[1.4fr_0.8fr_0.8fr_1.1fr_1.1fr_auto]">
           <label className="relative">
             <Search className="pointer-events-none absolute left-3 top-3 text-slate-500" size={18} />
             <input
@@ -108,6 +120,15 @@ export function DashboardClient() {
             />
           </label>
           <select
+            value={sortMode}
+            onChange={(event) => setSortMode(event.target.value as SortMode)}
+            className="rounded-lg border border-white/10 bg-slate-950 px-3 py-3 text-sm text-white outline-none"
+            aria-label="Sort candidates"
+          >
+            <option value="score-desc">Score descending</option>
+            <option value="rank-asc">Rank ascending</option>
+          </select>
+          <select
             value={risk}
             onChange={(event) => setRisk(event.target.value)}
             className="rounded-lg border border-white/10 bg-slate-950 px-3 py-3 text-sm text-white outline-none"
@@ -116,7 +137,7 @@ export function DashboardClient() {
               <option key={item}>{item}</option>
             ))}
           </select>
-          <label className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2">
+          <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2">
             <SlidersHorizontal size={17} className="text-slate-500" />
             <input
               type="number"
@@ -127,8 +148,18 @@ export function DashboardClient() {
               className="w-full bg-transparent text-sm text-white outline-none"
               aria-label="Minimum score"
             />
-          </label>
-          <label className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2">
+            <span className="text-xs text-slate-500">to</span>
+            <input
+              type="number"
+              value={scoreMax}
+              min={0}
+              max={100}
+              onChange={(event) => setScoreMax(Number(event.target.value))}
+              className="w-full bg-transparent text-sm text-white outline-none"
+              aria-label="Maximum score"
+            />
+          </div>
+          <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2">
             <span className="text-xs text-slate-500">YRS</span>
             <input
               type="number"
@@ -140,7 +171,18 @@ export function DashboardClient() {
               className="w-full bg-transparent text-sm text-white outline-none"
               aria-label="Minimum experience"
             />
-          </label>
+            <span className="text-xs text-slate-500">to</span>
+            <input
+              type="number"
+              value={experienceMax}
+              min={0}
+              max={30}
+              step={0.5}
+              onChange={(event) => setExperienceMax(Number(event.target.value))}
+              className="w-full bg-transparent text-sm text-white outline-none"
+              aria-label="Maximum experience"
+            />
+          </div>
           <label className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-slate-300">
             <input type="checkbox" checked={openOnly} onChange={(event) => setOpenOnly(event.target.checked)} />
             Open
