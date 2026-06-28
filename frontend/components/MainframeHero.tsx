@@ -93,23 +93,6 @@ export function MainframeHero() {
         }}
       />
 
-      {/* Composition cover for the source video's bottom-right corner mark: a soft
-          radial vignette that blends into the hero's black base (gradual, never a
-          hard patch), plus a small monochrome label that reads as intentional UI. */}
-      <div
-        className="pointer-events-none absolute inset-0 z-[1]"
-        style={{
-          background:
-            "radial-gradient(44% 44% at 100% 100%, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.55) 36%, transparent 72%)"
-        }}
-      />
-      <div className="pointer-events-none absolute bottom-6 right-6 z-[2] hidden md:block">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/55 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
-          <span className="h-1.5 w-1.5 rounded-full bg-white/80" aria-hidden="true" />
-          Explainable AI Discovery
-        </span>
-      </div>
-
       <CursorGlow />
       <MainframeNav checking={checking} onViewShortlist={handleViewShortlist} />
 
