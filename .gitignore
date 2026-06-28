@@ -34,3 +34,5 @@ outputs/*.json
 Thumbs.db
 .idea/
 .vscode/
+
+.vercel

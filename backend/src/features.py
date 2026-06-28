@@ -64,5 +64,30 @@ SERVICE_COMPANIES = [
 
 LOCATION_TERMS = [
     "pune", "noida", "delhi", "ncr", "gurugram", "gurgaon", "mumbai",
-    "hyderabad", "bangalore", "bengaluru", "india",
+    "hyderabad", "bangalore", "bengaluru", "india", "chennai", "kolkata",
+    "ahmedabad", "jaipur", "indore", "kochi", "trivandrum", "thiruvananthapuram",
+    "coimbatore", "vizag", "visakhapatnam", "nagpur", "surat", "lucknow",
+    "chandigarh", "bhubaneswar", "mysore", "mysuru", "vadodara", "kerala",
+    "tamil nadu", "karnataka", "maharashtra", "telangana", "andhra pradesh",
+    "gujarat", "rajasthan", "madhya pradesh", "haryana", "punjab", "west bengal",
+    "uttar pradesh", "odisha",
 ]
+
+# Roles are based in / near the Pune-Noida hiring zone, so a candidate already
+# located here does not need to relocate even if willing_to_relocate is false.
+INDIA_HUB_TERMS = [
+    "pune", "noida", "delhi", "ncr", "gurugram", "gurgaon", "new delhi",
+]
+
+# Component weights (sum to 1.0). Shared by scoring and the JSON breakdown so the
+# two can never drift apart. Emphasis is on real career evidence over raw
+# semantic keyword overlap.
+WEIGHTS = {
+    "semantic_match": 0.25,
+    "career_evidence": 0.25,
+    "core_skill_fit": 0.15,
+    "seniority_fit": 0.10,
+    "product_company_fit": 0.08,
+    "behavioral_signal_fit": 0.10,
+    "logistics_fit": 0.07,
+}

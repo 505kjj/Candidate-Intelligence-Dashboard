@@ -4,20 +4,10 @@ import csv
 import json
 from pathlib import Path
 
+from .features import WEIGHTS
 from .loader import CandidateRecord
 from .reasoning import behavioral_summary, build_reasoning, top_skills
 from .scoring import CandidateScore
-
-
-WEIGHTS = {
-    "semantic_match": 0.28,
-    "career_evidence": 0.22,
-    "core_skill_fit": 0.16,
-    "seniority_fit": 0.10,
-    "product_company_fit": 0.08,
-    "behavioral_signal_fit": 0.10,
-    "logistics_fit": 0.06,
-}
 
 
 def weighted_breakdown(score: CandidateScore) -> dict[str, float]:

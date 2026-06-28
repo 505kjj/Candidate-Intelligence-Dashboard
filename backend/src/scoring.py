@@ -7,11 +7,13 @@ from .features import (
     ADVANCED_AI_SKILLS,
     CAREER_EVIDENCE_KEYWORDS,
     CORE_SKILL_KEYWORDS,
+    INDIA_HUB_TERMS,
     LOCATION_TERMS,
     NON_TECH_TITLE_TERMS,
     PRODUCT_INDUSTRY_TERMS,
     SERVICE_COMPANIES,
     TECH_TITLE_TERMS,
+    WEIGHTS,
 )
 from .loader import CandidateRecord
 from .utils import clamp, count_keyword_hits, days_since, lower_text, safe_bool, safe_float, safe_int, token_hit, uniq_keep_order
@@ -33,6 +35,7 @@ class CandidateScore:
     strengths: list[str]
     concerns: list[str]
     risk_level: str
+    meta: dict[str, Any]
 
 
 def _skill_lookup(candidate: CandidateRecord) -> dict[str, dict[str, Any]]:
@@ -243,29 +246,63 @@ def score_behavioral_signal(candidate: CandidateRecord) -> ComponentScore:
     return ComponentScore(clamp(score), uniq_keep_order(evidence, 6), concerns[:3])
 
 
-def score_logistics(candidate: CandidateRecord) -> ComponentScore:
-    signals = candidate.redrob_signals
+def location_flags(candidate: CandidateRecord) -> dict[str, Any]:
+    """Resolve India / hub residency from the country field first (most reliable),
+    falling back to location-term matching when country is missing."""
+    country_low = lower_text(candidate.country)
     combined_location = lower_text(f"{candidate.location} {candidate.country}")
+    if country_low:
+        in_india = country_low == "india"
+    else:
+        in_india = any(term in combined_location for term in LOCATION_TERMS)
+    in_hub = in_india and any(term in combined_location for term in INDIA_HUB_TERMS)
+    return {
+        "in_india": in_india,
+        "in_hub": in_hub,
+        "country": candidate.country or ("India" if in_india else ""),
+        "combined_location": combined_location,
+    }
+
+
+def relocation_state(candidate: CandidateRecord) -> str:
+    """'willing' | 'unwilling' | 'unstated' — distinguishes an explicit False from
+    a genuinely missing field, so wording is never overstated."""
+    raw = candidate.redrob_signals.get("willing_to_relocate")
+    if raw is None:
+        return "unstated"
+    return "willing" if safe_bool(raw) else "unwilling"
+
+
+def score_logistics(candidate: CandidateRecord, loc: dict[str, Any]) -> ComponentScore:
+    signals = candidate.redrob_signals
     score = 45.0
     evidence: list[str] = []
     concerns: list[str] = []
 
-    if any(term in combined_location for term in LOCATION_TERMS):
+    if loc["in_india"]:
         score += 25
-        evidence.append(candidate.location or candidate.country or "India location")
-    elif candidate.country and lower_text(candidate.country) != "india":
+        evidence.append(candidate.location or "India location")
+        if loc["in_hub"]:
+            score += 6
+            evidence.append("already in the Pune/Delhi-NCR zone")
+    elif candidate.country:
         score -= 15
-        concerns.append(f"Outside India ({candidate.country})")
+        concerns.append(f"based in {candidate.country}, outside India")
 
     mode = lower_text(signals.get("preferred_work_mode"))
     if mode in {"hybrid", "flexible", "remote"}:
-        score += 10
+        score += 8
         evidence.append(f"{mode} work preference")
-    if safe_bool(signals.get("willing_to_relocate")):
+
+    reloc = relocation_state(candidate)
+    if reloc == "willing":
         score += 12
         evidence.append("willing to relocate")
-    elif not any(term in combined_location for term in ["pune", "noida", "delhi", "ncr"]):
-        concerns.append("Relocation willingness not shown")
+    elif reloc == "unwilling" and not loc["in_hub"]:
+        score -= 10
+        concerns.append("not willing to relocate")
+    elif reloc == "unstated" and not loc["in_hub"]:
+        concerns.append("relocation preference not stated")
 
     notice = safe_int(signals.get("notice_period_days"), 999)
     if notice <= 30:
@@ -319,15 +356,143 @@ def compute_trap_penalty(candidate: CandidateRecord, career_score: ComponentScor
         penalty += 12
         reasons.append("Skill score materially exceeds career evidence")
 
-    total_months = sum(safe_int(role.get("duration_months"), 0) for role in candidate.career_history)
-    if candidate.experience_years > 0 and total_months > candidate.experience_years * 12 * 1.75:
-        penalty += 6
-        reasons.append("Career timeline looks inconsistent")
-
     return min(45.0, penalty), uniq_keep_order(reasons, 5)
 
 
+def career_history_years(candidate: CandidateRecord) -> float:
+    months = sum(safe_int(role.get("duration_months"), 0) for role in candidate.career_history)
+    return round(months / 12.0, 1)
+
+
+def experience_consistency(candidate: CandidateRecord) -> dict[str, Any]:
+    """Compare the declared years_of_experience against the duration documented in
+    career_history. Large over-claims (profile says 16y, history shows ~7y) are the
+    planted honeypot/inconsistency pattern in this dataset."""
+    profile_years = round(float(candidate.experience_years or 0), 1)
+    career_years = career_history_years(candidate)
+    gap = round(profile_years - career_years, 1)
+    has_history = career_years >= 1.0  # at least some documented duration to compare
+
+    severity = "ok"
+    penalty = 0.0
+    note = ""
+    if has_history and gap >= 5 and profile_years >= 1.6 * max(career_years, 0.1):
+        severity = "overclaim_strong"
+        penalty = 14.0
+        note = f"declares {profile_years:.0f}y but career history documents only ~{career_years:.0f}y"
+    elif has_history and gap >= 3:
+        severity = "overclaim_moderate"
+        penalty = 6.0
+        note = f"declared {profile_years:.0f}y runs ahead of the ~{career_years:.0f}y in career history"
+    elif has_history and gap <= -2:
+        severity = "underclaim"
+        penalty = 4.0
+        note = f"career history (~{career_years:.0f}y) exceeds the declared {profile_years:.0f}y"
+    elif not has_history and profile_years >= 5:
+        severity = "sparse_history"
+        penalty = 3.0
+        note = f"declares {profile_years:.0f}y but career history is sparse/undocumented"
+
+    return {
+        "profile_years": profile_years,
+        "career_years": career_years,
+        "gap": gap,
+        "severity": severity,
+        "penalty": penalty,
+        "note": note,
+    }
+
+
+def compute_feasibility_penalty(
+    candidate: CandidateRecord, loc: dict[str, Any], consistency: dict[str, Any]
+) -> tuple[float, list[tuple[str, str]]]:
+    """Hiring-feasibility + data-trust penalties applied on the 0-100 final scale.
+    Returns (penalty, concerns) where each concern is (severity, text); severity is
+    'hard' or 'medium' and feeds the risk-level computation."""
+    signals = candidate.redrob_signals
+    penalty = 0.0
+    concerns: list[tuple[str, str]] = []
+    reloc = relocation_state(candidate)
+
+    # --- availability ---
+    if signals.get("open_to_work_flag") is not True:
+        penalty += 7
+        concerns.append(("hard", "not currently marked open to work"))
+
+    response = safe_float(signals.get("recruiter_response_rate"), -1)
+    if 0 <= response < 0.25:
+        penalty += 8
+        concerns.append(("hard", f"low recruiter response rate ({response:.0%})"))
+    elif 0.25 <= response < 0.35:
+        penalty += 3
+        concerns.append(("medium", f"modest recruiter response rate ({response:.0%})"))
+
+    inactive = days_since(signals.get("last_active_date"))
+    if inactive is not None and inactive > 180:
+        penalty += 6
+        concerns.append(("hard", f"inactive for {inactive} days"))
+    elif inactive is not None and inactive > 120:
+        penalty += 3
+        concerns.append(("medium", f"last active {inactive} days ago"))
+
+    notice = safe_int(signals.get("notice_period_days"), -1)
+    if notice >= 120:
+        penalty += 7
+        concerns.append(("hard", f"{notice}-day notice period"))
+    elif notice >= 90:
+        penalty += 5
+        concerns.append(("medium", f"{notice}-day notice period"))
+    elif notice > 60:
+        penalty += 2
+        concerns.append(("medium", f"{notice}-day notice period"))
+
+    # --- location / relocation ---
+    if not loc["in_india"] and candidate.country:
+        if reloc == "willing":
+            penalty += 6
+            concerns.append(("medium", f"based in {candidate.country} but willing to relocate"))
+        else:
+            penalty += 13
+            concerns.append(("hard", f"based in {candidate.country} and not relocating to India"))
+    elif loc["in_india"] and not loc["in_hub"]:
+        if reloc == "unwilling":
+            penalty += 4
+            concerns.append(("medium", "not willing to relocate toward the Pune/NCR zone"))
+        elif reloc == "unstated":
+            penalty += 2
+            concerns.append(("medium", "relocation preference not stated"))
+
+    # --- engineering proof (minor) ---
+    github = signals.get("github_activity_score")
+    if github is None or safe_float(github, -1) == -1:
+        penalty += 1.5  # minor, per JD valuing engineering proof — never a hard reject
+
+    # --- seniority range nudge (component already rewards 5-9) ---
+    years = float(candidate.experience_years or 0)
+    if years and years < 3:
+        penalty += 6
+        concerns.append(("medium", f"only {years:.1f}y experience, below the 5-9y target"))
+    elif years and years < 4:
+        penalty += 2
+        concerns.append(("medium", f"{years:.1f}y experience, just under the target band"))
+    elif years > 12:
+        penalty += 4
+        concerns.append(("medium", f"{years:.1f}y experience, well above the target band"))
+    elif years > 10:
+        penalty += 1
+
+    # --- data-trust / honeypot ---
+    if consistency["penalty"] > 0:
+        penalty += consistency["penalty"]
+        sev = "hard" if consistency["severity"] == "overclaim_strong" else "medium"
+        concerns.append((sev, consistency["note"]))
+
+    return penalty, concerns
+
+
 def score_candidate(candidate: CandidateRecord, semantic_score: float) -> CandidateScore:
+    loc = location_flags(candidate)
+    consistency = experience_consistency(candidate)
     components = {
         "semantic_match": ComponentScore(clamp(semantic_score), [], []),
         "career_evidence": score_career_evidence(candidate),
@@ -335,42 +500,83 @@ def score_candidate(candidate: CandidateRecord, semantic_score: float) -> Candid
         "seniority_fit": score_seniority(candidate),
         "product_company_fit": score_product_company_fit(candidate),
         "behavioral_signal_fit": score_behavioral_signal(candidate),
-        "logistics_fit": score_logistics(candidate),
+        "logistics_fit": score_logistics(candidate, loc),
     }
-    penalty, penalty_reasons = compute_trap_penalty(candidate, components["career_evidence"], components["core_skill_fit"])
-    weights = {
-        "semantic_match": 0.28,
-        "career_evidence": 0.22,
-        "core_skill_fit": 0.16,
-        "seniority_fit": 0.10,
-        "product_company_fit": 0.08,
-        "behavioral_signal_fit": 0.10,
-        "logistics_fit": 0.06,
-    }
-    final_score = sum(components[name].score * weight for name, weight in weights.items()) - penalty
+
+    trap_penalty, trap_reasons = compute_trap_penalty(
+        candidate, components["career_evidence"], components["core_skill_fit"]
+    )
+    feasibility_penalty, feasibility_concerns = compute_feasibility_penalty(candidate, loc, consistency)
+    penalty = min(60.0, trap_penalty + feasibility_penalty)
+
+    final_score = sum(components[name].score * weight for name, weight in WEIGHTS.items()) - penalty
     final_score = clamp(final_score)
 
+    # Evidence-quality concerns come from the content components; hiring-feasibility
+    # and honeypot concerns come from the feasibility engine (single source of truth,
+    # with correct relocation/availability wording).
     strengths: list[str] = []
-    concerns: list[str] = []
+    quality_concerns: list[str] = []
     for name, component in components.items():
-        if name == "semantic_match":
+        if name in {"semantic_match", "behavioral_signal_fit", "logistics_fit"}:
             continue
         if component.score >= 70 and component.evidence:
             strengths.extend(component.evidence[:2])
-        concerns.extend(component.concerns[:2])
-    concerns.extend(penalty_reasons[:2])
-    risk_level = "Low"
-    if penalty >= 18 or final_score < 45:
+        quality_concerns.extend(component.concerns[:1])
+
+    hard_concerns = [text for sev, text in feasibility_concerns if sev == "hard"]
+    medium_concerns = [text for sev, text in feasibility_concerns if sev == "medium"]
+    # Order concerns by severity: hard feasibility, then medium feasibility, then
+    # trap reasons, then evidence-quality notes.
+    concerns = uniq_keep_order(hard_concerns + medium_concerns + trap_reasons + quality_concerns, 5)
+
+    # Risk level from concern severity + honeypot + location, not just penalty size.
+    risk_points = 2 * len(hard_concerns) + len(medium_concerns)
+    if trap_penalty >= 8:
+        risk_points += 1
+    strong_honeypot = consistency["severity"] == "overclaim_strong"
+    # Abroad and not relocating is effectively unhirable for a Pune/Noida role.
+    abroad_stuck = (not loc["in_india"]) and bool(candidate.country) and relocation_state(candidate) != "willing"
+    if (
+        strong_honeypot
+        or abroad_stuck
+        or penalty >= 20
+        or risk_points >= 4
+        or (hard_concerns and risk_points >= 3)
+        or final_score < 45
+    ):
         risk_level = "High"
-    elif penalty >= 8 or final_score < 65:
+    elif penalty >= 7 or risk_points >= 1 or final_score < 66:
         risk_level = "Medium"
+    else:
+        risk_level = "Low"
+
+    meta = {
+        "in_india": loc["in_india"],
+        "in_hub": loc["in_hub"],
+        "country": loc["country"],
+        "relocation": relocation_state(candidate),
+        "profile_years": consistency["profile_years"],
+        "career_years": consistency["career_years"],
+        "consistency": consistency["severity"],
+        "consistency_note": consistency["note"],
+        "open_to_work": candidate.redrob_signals.get("open_to_work_flag") is True,
+        "response_rate": safe_float(candidate.redrob_signals.get("recruiter_response_rate"), -1),
+        "notice_days": safe_int(candidate.redrob_signals.get("notice_period_days"), -1),
+        "hard_concerns": hard_concerns,
+        "medium_concerns": medium_concerns,
+        "trap_penalty": round(trap_penalty, 2),
+        "feasibility_penalty": round(feasibility_penalty, 2),
+        "primary_concern": (hard_concerns + medium_concerns + trap_reasons + ["none"])[0],
+    }
 
     return CandidateScore(
         final_score=round(final_score, 6),
         components=components,
         penalty=-round(penalty, 4),
-        penalty_reasons=penalty_reasons,
+        penalty_reasons=trap_reasons + [t for _, t in feasibility_concerns],
         strengths=uniq_keep_order(strengths, 5),
-        concerns=uniq_keep_order(concerns, 5),
+        concerns=concerns,
         risk_level=risk_level,
+        meta=meta,
     )
