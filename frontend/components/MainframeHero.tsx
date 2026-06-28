@@ -11,8 +11,6 @@ import { CursorGlow } from "@/components/CursorGlow";
 import { DiscoveryOverlay } from "@/components/DiscoveryOverlay";
 import { useTypewriter } from "@/components/useTypewriter";
 
-const INTRO_LINE_1 = "Hey there, meet A.R.I.A,";
-const INTRO_LINE_2 = "Adaptive Recruiting Intelligence Agent";
 const TYPEWRITER_TEXT = "Glad you stopped in. Good talent tends to find us. Now, who are we discovering?";
 
 const PILL_BASE =
@@ -95,26 +93,28 @@ export function MainframeHero() {
         }}
       />
 
+      {/* Composition cover for the source video's bottom-right corner mark: a soft
+          radial vignette that blends into the hero's black base (gradual, never a
+          hard patch), plus a small monochrome label that reads as intentional UI. */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{
+          background:
+            "radial-gradient(44% 44% at 100% 100%, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.55) 36%, transparent 72%)"
+        }}
+      />
+      <div className="pointer-events-none absolute bottom-6 right-6 z-[2] hidden md:block">
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/55 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
+          <span className="h-1.5 w-1.5 rounded-full bg-white/80" aria-hidden="true" />
+          Explainable AI Discovery
+        </span>
+      </div>
+
       <CursorGlow />
       <MainframeNav checking={checking} onViewShortlist={handleViewShortlist} />
 
       <div className="absolute inset-0 z-10 flex flex-col justify-end px-5 pb-12 sm:px-8 md:justify-center md:px-10 md:pb-0">
         <div className="relative z-10 max-w-xl">
-          <p
-            aria-hidden="true"
-            className="pointer-events-none mb-5 select-none text-white sm:mb-6"
-            style={{
-              fontSize: "clamp(18px, 4vw, 26px)",
-              lineHeight: 1.3,
-              fontWeight: 400,
-              filter: "blur(4px)"
-            }}
-          >
-            {INTRO_LINE_1}
-            <br />
-            {INTRO_LINE_2}
-          </p>
-
           <p
             className="mb-5 text-white sm:mb-6"
             style={{
