@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Loader2, PlayCircle, X } from "lucide-react";
-import { HeroVideo } from "@/components/HeroVideo";
+import { HeroFrameScrub } from "@/components/HeroFrameScrub";
 import { MainframeNav } from "@/components/MainframeNav";
 import { CursorGlow } from "@/components/CursorGlow";
 import { DiscoveryOverlay } from "@/components/DiscoveryOverlay";
@@ -81,7 +81,7 @@ export function MainframeHero() {
 
   return (
     <section className="relative h-screen min-h-screen w-full overflow-hidden bg-black">
-      <HeroVideo />
+      <HeroFrameScrub />
 
       {/* Legibility scrim: a cheap static gradient (no backdrop-filter / no per-frame
           blur) darkening the bottom where the hero copy sits. */}
