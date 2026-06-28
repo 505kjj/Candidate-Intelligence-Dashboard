@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Loader2, PlayCircle, X } from "lucide-react";
-import { MouseScrubVideo } from "@/components/MouseScrubVideo";
+import { HeroVideo } from "@/components/HeroVideo";
 import { MainframeNav } from "@/components/MainframeNav";
 import { CursorGlow } from "@/components/CursorGlow";
 import { DiscoveryOverlay } from "@/components/DiscoveryOverlay";
@@ -83,14 +83,15 @@ export function MainframeHero() {
 
   return (
     <section className="relative h-screen min-h-screen w-full overflow-hidden bg-black">
-      <MouseScrubVideo />
+      <HeroVideo />
 
-      {/* blur-fade overlay: frosted glass at the bottom for legibility, clear toward the top */}
+      {/* Legibility scrim: a cheap static gradient (no backdrop-filter / no per-frame
+          blur) darkening the bottom where the hero copy sits. */}
       <div
-        className="pointer-events-none absolute inset-0 z-[1] backdrop-blur-xl"
+        className="pointer-events-none absolute inset-0 z-[1]"
         style={{
-          maskImage: "linear-gradient(to top, black 0%, transparent 45%)",
-          WebkitMaskImage: "linear-gradient(to top, black 0%, transparent 45%)"
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 28%, transparent 55%)"
         }}
       />
 
