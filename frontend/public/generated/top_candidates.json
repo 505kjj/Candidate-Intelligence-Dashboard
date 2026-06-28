@@ -1,0 +1,4596 @@
+[
+  {
+    "candidate_id": "CAND_0079387",
+    "rank": 1,
+    "score": 95.76,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Haystack, scikit-learn, Sentence Transformers, QLoRA; 6.9 years experience. Minor concern: Relocation willingness not shown.",
+    "title": "AI Engineer",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 6.9,
+    "top_skills": [
+      "Haystack",
+      "scikit-learn",
+      "Sentence Transformers",
+      "QLoRA",
+      "Vector Search",
+      "OpenSearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "Python",
+      "scikit-learn",
+      "6.9 years experience"
+    ],
+    "concerns": [
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 14.32,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-25",
+      "response_rate": "81%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0046064",
+    "rank": 2,
+    "score": 95.6,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include Pinecone, BM25, PEFT, Elasticsearch; 8.9 years experience. Minor concern: Relocation willingness not shown.",
+    "title": "Senior NLP Engineer",
+    "location": "Coimbatore, Tamil Nadu",
+    "experience_years": 8.9,
+    "top_skills": [
+      "Pinecone",
+      "BM25",
+      "PEFT",
+      "Elasticsearch",
+      "Python",
+      "Haystack"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "Python",
+      "LLM",
+      "8.9 years experience"
+    ],
+    "concerns": [
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 21.12,
+      "core_skill_fit": 13.2,
+      "seniority_fit": 10.0,
+      "product_company_fit": 8.0,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-26",
+      "response_rate": "78%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0018499",
+    "rank": 3,
+    "score": 93.48,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include scikit-learn, Recommendation Systems, Learning to Rank, Embeddings; 7.2 years experience. Minor concern: Python is not explicit.",
+    "title": "Senior Machine Learning Engineer",
+    "location": "Noida, Uttar Pradesh",
+    "experience_years": 7.2,
+    "top_skills": [
+      "scikit-learn",
+      "Recommendation Systems",
+      "Learning to Rank",
+      "Embeddings",
+      "Deep Learning",
+      "QLoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "scikit-learn",
+      "LangChain",
+      "7.2 years experience"
+    ],
+    "concerns": [
+      "Python is not explicit"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 12.56,
+      "seniority_fit": 10.0,
+      "product_company_fit": 8.0,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-13",
+      "response_rate": "61%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0077337",
+    "rank": 4,
+    "score": 93.2,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include LlamaIndex, LLMs, Information Retrieval, RAG; 7.0 years experience. Minor concern: no major trap indicators detected.",
+    "title": "Staff Machine Learning Engineer",
+    "location": "Kochi, Kerala",
+    "experience_years": 7.0,
+    "top_skills": [
+      "LlamaIndex",
+      "LLMs",
+      "Information Retrieval",
+      "RAG",
+      "Sentence Transformers",
+      "Recommendation Systems"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "7.0 years experience",
+      "product",
+      "fintech"
+    ],
+    "concerns": [],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 9.68,
+      "seniority_fit": 10.0,
+      "product_company_fit": 8.0,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-26",
+      "response_rate": "95%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0081846",
+    "rank": 5,
+    "score": 92.63,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Information Retrieval, Learning to Rank, Vector Search, Machine Learning; 6.7 years experience. Minor concern: no major trap indicators detected.",
+    "title": "Lead AI Engineer",
+    "location": "Jaipur, Rajasthan",
+    "experience_years": 6.7,
+    "top_skills": [
+      "Information Retrieval",
+      "Learning to Rank",
+      "Vector Search",
+      "Machine Learning",
+      "BM25",
+      "Qdrant"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "Python",
+      "PyTorch",
+      "6.7 years experience"
+    ],
+    "concerns": [],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 11.36,
+      "seniority_fit": 10.0,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 9.81,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-03",
+      "response_rate": "73%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0086022",
+    "rank": 6,
+    "score": 92.5,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include pgvector, LangChain, PyTorch, Pinecone; 5.3 years experience. Minor concern: Python is not explicit.",
+    "title": "Senior Applied Scientist",
+    "location": "Kolkata, West Bengal",
+    "experience_years": 5.3,
+    "top_skills": [
+      "pgvector",
+      "LangChain",
+      "PyTorch",
+      "Pinecone",
+      "Sentence Transformers",
+      "Embeddings"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "PyTorch",
+      "TensorFlow",
+      "5.3 years experience"
+    ],
+    "concerns": [
+      "Python is not explicit"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 12.64,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.32,
+      "behavioral_signal_fit": 9.52,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-15",
+      "response_rate": "55%",
+      "notice_period": "0 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0005649",
+    "rank": 7,
+    "score": 91.92,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Information Retrieval, Haystack, Deep Learning, Fine-tuning LLMs; 7.4 years experience. Minor concern: Python is not explicit; 90-day notice period.",
+    "title": "Senior Data Scientist",
+    "location": "Delhi, Delhi",
+    "experience_years": 7.4,
+    "top_skills": [
+      "Information Retrieval",
+      "Haystack",
+      "Deep Learning",
+      "Fine-tuning LLMs",
+      "scikit-learn",
+      "Recommendation Systems"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "TensorFlow",
+      "scikit-learn",
+      "7.4 years experience"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 12.32,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 7.92,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-14",
+      "response_rate": "57%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0055905",
+    "rank": 8,
+    "score": 91.22,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include OpenSearch, Python, LangChain, Elasticsearch; 8.1 years experience. Minor concern: GitHub not linked; Outside India (UK).",
+    "title": "Senior Machine Learning Engineer",
+    "location": "London",
+    "experience_years": 8.1,
+    "top_skills": [
+      "OpenSearch",
+      "Python",
+      "LangChain",
+      "Elasticsearch",
+      "Embeddings",
+      "Vector Search"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "Python",
+      "LangChain",
+      "8.1 years experience"
+    ],
+    "concerns": [
+      "GitHub not linked",
+      "Outside India (UK)",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 21.12,
+      "core_skill_fit": 12.16,
+      "seniority_fit": 10.0,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 9.62,
+      "logistics_fit": 2.88,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-17",
+      "response_rate": "87%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0033861",
+    "rank": 9,
+    "score": 91.12,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Milvus, LlamaIndex, LLMs, scikit-learn; 8.0 years experience. Minor concern: Python is not explicit; Not marked open to work.",
+    "title": "Senior NLP Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 8.0,
+    "top_skills": [
+      "Milvus",
+      "LlamaIndex",
+      "LLMs",
+      "scikit-learn",
+      "Learning to Rank",
+      "Elasticsearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "TensorFlow",
+      "scikit-learn",
+      "8.0 years experience"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Not marked open to work",
+      "slow recruiter response time",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 13.12,
+      "seniority_fit": 10.0,
+      "product_company_fit": 8.0,
+      "behavioral_signal_fit": 4.72,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-02-16",
+      "response_rate": "16%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0068811",
+    "rank": 10,
+    "score": 90.25,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include Pinecone, Haystack, OpenSearch, Qdrant; 8.0 years experience. Minor concern: Python is not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Pune, Maharashtra",
+    "experience_years": 8.0,
+    "top_skills": [
+      "Pinecone",
+      "Haystack",
+      "OpenSearch",
+      "Qdrant",
+      "scikit-learn",
+      "TensorFlow"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "TensorFlow",
+      "scikit-learn",
+      "8.0 years experience"
+    ],
+    "concerns": [
+      "Python is not explicit"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.68,
+      "core_skill_fit": 11.76,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.01,
+      "logistics_fit": 5.4,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-21",
+      "response_rate": "42%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0044855",
+    "rank": 11,
+    "score": 90.03,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Embeddings, Qdrant, Pinecone, NLP; 6.6 years experience. Minor concern: Python is not explicit; Not marked open to work.",
+    "title": "Senior Data Scientist",
+    "location": "Coimbatore, Tamil Nadu",
+    "experience_years": 6.6,
+    "top_skills": [
+      "Embeddings",
+      "Qdrant",
+      "Pinecone",
+      "NLP",
+      "Machine Learning",
+      "QLoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "RAG",
+      "embeddings",
+      "6.6 years experience"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Not marked open to work"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 12.64,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.45,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-04-24",
+      "response_rate": "57%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0002025",
+    "rank": 12,
+    "score": 89.46,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include Deep Learning, NLP, FAISS, Recommendation Systems; 5.9 years experience. Minor concern: Relocation willingness not shown.",
+    "title": "Senior AI Engineer",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 5.9,
+    "top_skills": [
+      "Deep Learning",
+      "NLP",
+      "FAISS",
+      "Recommendation Systems",
+      "Haystack",
+      "TensorFlow"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "embedding",
+      "embeddings",
+      "Python",
+      "TensorFlow",
+      "5.9 years experience"
+    ],
+    "concerns": [
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.62,
+      "core_skill_fit": 13.12,
+      "seniority_fit": 10.0,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-26",
+      "response_rate": "80%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0051292",
+    "rank": 13,
+    "score": 88.82,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include RAG, Fine-tuning LLMs, pgvector, NLP; 5.2 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 5.2,
+    "top_skills": [
+      "RAG",
+      "Fine-tuning LLMs",
+      "pgvector",
+      "NLP",
+      "Vector Search",
+      "Elasticsearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "5.2 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 10.48,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 9.74,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-12",
+      "response_rate": "52%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0071974",
+    "rank": 14,
+    "score": 88.8,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include Qdrant, Embeddings, Elasticsearch, BM25; 7.8 years experience. Minor concern: Python is not explicit; Relocation willingness not shown.",
+    "title": "Senior AI Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 7.8,
+    "top_skills": [
+      "Qdrant",
+      "Embeddings",
+      "Elasticsearch",
+      "BM25",
+      "Sentence Transformers",
+      "Weaviate"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "7.8 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 19.58,
+      "core_skill_fit": 9.2,
+      "seniority_fit": 10.0,
+      "product_company_fit": 8.0,
+      "behavioral_signal_fit": 9.82,
+      "logistics_fit": 4.2,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-16",
+      "response_rate": "76%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0010685",
+    "rank": 15,
+    "score": 88.73,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include RAG, Elasticsearch, Prompt Engineering, LlamaIndex; 6.7 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Python is not explicit.",
+    "title": "NLP Engineer",
+    "location": "Kolkata, West Bengal",
+    "experience_years": 6.7,
+    "top_skills": [
+      "RAG",
+      "Elasticsearch",
+      "Prompt Engineering",
+      "LlamaIndex",
+      "Information Retrieval",
+      "PyTorch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "6.7 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Python is not explicit",
+      "GitHub not linked",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 8.08,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.97,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-16",
+      "response_rate": "83%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0027691",
+    "rank": 16,
+    "score": 88.68,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Recommendation Systems, QLoRA, Weaviate, LoRA; 6.5 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "NLP Engineer",
+    "location": "Pune, Maharashtra",
+    "experience_years": 6.5,
+    "top_skills": [
+      "Recommendation Systems",
+      "QLoRA",
+      "Weaviate",
+      "LoRA",
+      "Semantic Search",
+      "TensorFlow"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "6.5 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.68,
+      "core_skill_fit": 8.32,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-31",
+      "response_rate": "68%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0039754",
+    "rank": 17,
+    "score": 88.36,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include NLP, Deep Learning, Python, Elasticsearch; 16.2 years experience. Minor concern: Several AI skills are weakly supported by career text; Above target range and may be less hands-on.",
+    "title": "Senior Applied Scientist",
+    "location": "Indore, Madhya Pradesh",
+    "experience_years": 16.2,
+    "top_skills": [
+      "NLP",
+      "Deep Learning",
+      "Python",
+      "Elasticsearch",
+      "OpenSearch",
+      "Weaviate"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "product",
+      "internet",
+      "open to work"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Above target range and may be less hands-on"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 10.72,
+      "seniority_fit": 4.2,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-14",
+      "response_rate": "81%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0077285",
+    "rank": 18,
+    "score": 88.14,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include Information Retrieval, Sentence Transformers, Fine-tuning LLMs, Embeddings; 5.5 years experience. Minor concern: Python is not explicit; Relocation willingness not shown.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Ahmedabad, Gujarat",
+    "experience_years": 5.5,
+    "top_skills": [
+      "Information Retrieval",
+      "Sentence Transformers",
+      "Fine-tuning LLMs",
+      "Embeddings",
+      "LoRA",
+      "LlamaIndex"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "5.5 years experience",
+      "product",
+      "e-commerce"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 19.36,
+      "core_skill_fit": 10.88,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 9.5,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-03",
+      "response_rate": "56%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0083307",
+    "rank": 19,
+    "score": 88.11,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Weaviate, Python, PEFT, Vector Search; 7.8 years experience. Minor concern: Ranking evaluation metrics are not explicit; 120-day notice period.",
+    "title": "Search Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 7.8,
+    "top_skills": [
+      "Weaviate",
+      "Python",
+      "PEFT",
+      "Vector Search",
+      "Pinecone",
+      "QLoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "Python",
+      "scikit-learn",
+      "7.8 years experience"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "120-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 13.28,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.43,
+      "logistics_fit": 4.08,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-21",
+      "response_rate": "70%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0041610",
+    "rank": 20,
+    "score": 87.54,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include OpenSearch, pgvector, Recommendation Systems, Elasticsearch; 6.7 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Indore, Madhya Pradesh",
+    "experience_years": 6.7,
+    "top_skills": [
+      "OpenSearch",
+      "pgvector",
+      "Recommendation Systems",
+      "Elasticsearch",
+      "Learning to Rank",
+      "scikit-learn"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "6.7 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 16.5,
+      "core_skill_fit": 10.64,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-14",
+      "response_rate": "52%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0046525",
+    "rank": 21,
+    "score": 87.44,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include Sentence Transformers, Machine Learning, LlamaIndex, Qdrant; 6.1 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Senior Machine Learning Engineer",
+    "location": "Pune, Maharashtra",
+    "experience_years": 6.1,
+    "top_skills": [
+      "Sentence Transformers",
+      "Machine Learning",
+      "LlamaIndex",
+      "Qdrant",
+      "YOLO",
+      "pgvector"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "6.1 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 7.44,
+      "seniority_fit": 10.0,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 9.62,
+      "logistics_fit": 4.92,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-23",
+      "response_rate": "88%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0044883",
+    "rank": 22,
+    "score": 87.2,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include TensorFlow, PyTorch, Prompt Engineering, Fine-tuning LLMs; 6.3 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "AI Engineer",
+    "location": "Berlin",
+    "experience_years": 6.3,
+    "top_skills": [
+      "TensorFlow",
+      "PyTorch",
+      "Prompt Engineering",
+      "Fine-tuning LLMs",
+      "QLoRA",
+      "BM25"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "PyTorch",
+      "TensorFlow",
+      "6.3 years experience"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work",
+      "90-day notice period",
+      "Outside India (Germany)"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 12.08,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 5.6,
+      "logistics_fit": 3.12,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-07",
+      "response_rate": "84%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0030953",
+    "rank": 23,
+    "score": 87.19,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include RAG, Qdrant, Hugging Face Transformers, Weaviate; 7.8 years experience. Minor concern: Several AI skills are weakly supported by career text; Not marked open to work.",
+    "title": "Search Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 7.8,
+    "top_skills": [
+      "RAG",
+      "Qdrant",
+      "Hugging Face Transformers",
+      "Weaviate",
+      "Learning to Rank",
+      "LangChain"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "Python",
+      "LangChain",
+      "7.8 years experience"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 12.0,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 6.21,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-04-11",
+      "response_rate": "63%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0098846",
+    "rank": 24,
+    "score": 87.1,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include Recommendation Systems, Qdrant, PEFT, LlamaIndex; 7.6 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "AI Engineer",
+    "location": "Indore, Madhya Pradesh",
+    "experience_years": 7.6,
+    "top_skills": [
+      "Recommendation Systems",
+      "Qdrant",
+      "PEFT",
+      "LlamaIndex",
+      "Machine Learning",
+      "Hugging Face Transformers"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "7.6 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.82,
+      "core_skill_fit": 9.36,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-23",
+      "response_rate": "62%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0094759",
+    "rank": 25,
+    "score": 87.07,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include Weaviate, Prompt Engineering, Semantic Search, Hugging Face Transformers; 8.6 years experience. Minor concern: Python is not explicit; Not marked open to work.",
+    "title": "Lead AI Engineer",
+    "location": "Mumbai, Maharashtra",
+    "experience_years": 8.6,
+    "top_skills": [
+      "Weaviate",
+      "Prompt Engineering",
+      "Semantic Search",
+      "Hugging Face Transformers",
+      "FAISS",
+      "Fine-tuning LLMs"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "8.6 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Not marked open to work",
+      "low response rate (11%)"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 10.48,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.88,
+      "behavioral_signal_fit": 5.69,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-01-08",
+      "response_rate": "11%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0058575",
+    "rank": 26,
+    "score": 87.02,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Hugging Face Transformers, Sentence Transformers, Recommendation Systems, PyTorch; 5.8 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "AI Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 5.8,
+    "top_skills": [
+      "Hugging Face Transformers",
+      "Sentence Transformers",
+      "Recommendation Systems",
+      "PyTorch",
+      "Pinecone",
+      "Reinforcement Learning"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "5.8 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 21.78,
+      "core_skill_fit": 8.48,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 7.64,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-05",
+      "response_rate": "69%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0028793",
+    "rank": 27,
+    "score": 86.87,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include LoRA, QLoRA, Embeddings, Haystack; 7.2 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Search Engineer",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 7.2,
+    "top_skills": [
+      "LoRA",
+      "QLoRA",
+      "Embeddings",
+      "Haystack",
+      "Information Retrieval",
+      "PyTorch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "7.2 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "120-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 8.96,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.69,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-13",
+      "response_rate": "57%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0027801",
+    "rank": 28,
+    "score": 86.57,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Milvus, QLoRA, Learning to Rank, TensorFlow; 7.4 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "NLP Engineer",
+    "location": "Hyderabad, Telangana",
+    "experience_years": 7.4,
+    "top_skills": [
+      "Milvus",
+      "QLoRA",
+      "Learning to Rank",
+      "TensorFlow",
+      "LlamaIndex",
+      "OpenSearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "7.4 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "120-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.68,
+      "core_skill_fit": 9.84,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 7.81,
+      "logistics_fit": 4.08,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-12",
+      "response_rate": "65%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0043228",
+    "rank": 29,
+    "score": 86.45,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Sentence Transformers, Hugging Face Transformers, OpenSearch, pgvector; 6.8 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 6.8,
+    "top_skills": [
+      "Sentence Transformers",
+      "Hugging Face Transformers",
+      "OpenSearch",
+      "pgvector",
+      "NLP",
+      "Weaviate"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "6.8 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.68,
+      "core_skill_fit": 9.04,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.05,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-22",
+      "response_rate": "41%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0029367",
+    "rank": 30,
+    "score": 86.19,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Recommendation Systems, LangChain, Sentence Transformers, Pinecone; 5.7 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Senior Data Scientist",
+    "location": "Bangalore, Karnataka",
+    "experience_years": 5.7,
+    "top_skills": [
+      "Recommendation Systems",
+      "LangChain",
+      "Sentence Transformers",
+      "Pinecone",
+      "TensorFlow",
+      "PyTorch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "PyTorch",
+      "TensorFlow",
+      "5.7 years experience"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "90-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.82,
+      "core_skill_fit": 11.76,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 7.65,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-20",
+      "response_rate": "77%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0008425",
+    "rank": 31,
+    "score": 86.02,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Information Retrieval, Sentence Transformers, Recommendation Systems, LoRA; 7.8 years experience. Minor concern: 90-day notice period; Relocation willingness not shown.",
+    "title": "Senior NLP Engineer",
+    "location": "Kolkata, West Bengal",
+    "experience_years": 7.8,
+    "top_skills": [
+      "Information Retrieval",
+      "Sentence Transformers",
+      "Recommendation Systems",
+      "LoRA",
+      "pgvector",
+      "Hugging Face Transformers"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "7.8 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "90-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.59,
+      "core_skill_fit": 8.96,
+      "seniority_fit": 10.0,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 8.23,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-25",
+      "response_rate": "66%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0069905",
+    "rank": 32,
+    "score": 85.84,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Python, Sentence Transformers, LoRA, LangChain; 6.6 years experience. Minor concern: Ranking evaluation metrics are not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Applied ML Engineer",
+    "location": "Bhubaneswar, Odisha",
+    "experience_years": 6.6,
+    "top_skills": [
+      "Python",
+      "Sentence Transformers",
+      "LoRA",
+      "LangChain",
+      "Learning to Rank",
+      "Weaviate"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "6.6 years experience",
+      "product",
+      "e-commerce"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Several AI skills are weakly supported by career text",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 10.24,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 7.6,
+      "logistics_fit": 4.92,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-21",
+      "response_rate": "78%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0005260",
+    "rank": 33,
+    "score": 85.64,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include NLP, Semantic Search, Python, LoRA; 5.2 years experience. Minor concern: Not marked open to work; GitHub not linked.",
+    "title": "Senior NLP Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 5.2,
+    "top_skills": [
+      "NLP",
+      "Semantic Search",
+      "Python",
+      "LoRA",
+      "Deep Learning",
+      "Embeddings"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "5.2 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Not marked open to work",
+      "GitHub not linked"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 10.8,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.32,
+      "behavioral_signal_fit": 6.68,
+      "logistics_fit": 4.92,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-10",
+      "response_rate": "86%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0061265",
+    "rank": 34,
+    "score": 85.08,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Hugging Face Transformers, Milvus, QLoRA, LangChain; 6.6 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Delhi, Delhi",
+    "experience_years": 6.6,
+    "top_skills": [
+      "Hugging Face Transformers",
+      "Milvus",
+      "QLoRA",
+      "LangChain",
+      "Learning to Rank",
+      "Embeddings"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "6.6 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "120-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.46,
+      "core_skill_fit": 7.68,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.46,
+      "logistics_fit": 4.08,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-25",
+      "response_rate": "94%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0092278",
+    "rank": 35,
+    "score": 84.75,
+    "reasoning": "Strong match because career history shows retrieval, embedding, embeddings; skills include QLoRA, NLP, Milvus, PEFT; 6.8 years experience. Minor concern: Python is not explicit; Not marked open to work.",
+    "title": "Senior NLP Engineer",
+    "location": "Pune, Maharashtra",
+    "experience_years": 6.8,
+    "top_skills": [
+      "QLoRA",
+      "NLP",
+      "Milvus",
+      "PEFT",
+      "Elasticsearch",
+      "Semantic Search"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "embedding",
+      "6.8 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Not marked open to work",
+      "inactive for 229 days"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 11.12,
+      "seniority_fit": 10.0,
+      "product_company_fit": 8.0,
+      "behavioral_signal_fit": 0.83,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2025-11-07",
+      "response_rate": "7%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0075249",
+    "rank": 36,
+    "score": 84.63,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Haystack, Machine Learning, Pinecone, Milvus; 6.2 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Applied ML Engineer",
+    "location": "Ahmedabad, Gujarat",
+    "experience_years": 6.2,
+    "top_skills": [
+      "Haystack",
+      "Machine Learning",
+      "Pinecone",
+      "Milvus",
+      "BM25",
+      "Sentence Transformers"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "6.2 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 8.16,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 9.15,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-09",
+      "response_rate": "82%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0095528",
+    "rank": 37,
+    "score": 84.4,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include pgvector, Fine-tuning LLMs, Elasticsearch, PyTorch; 5.3 years experience. Minor concern: Several AI skills are weakly supported by career text; GitHub not linked.",
+    "title": "Senior Data Scientist",
+    "location": "Indore, Madhya Pradesh",
+    "experience_years": 5.3,
+    "top_skills": [
+      "pgvector",
+      "Fine-tuning LLMs",
+      "Elasticsearch",
+      "PyTorch",
+      "Semantic Search",
+      "Qdrant"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "5.3 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "GitHub not linked",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.15,
+      "core_skill_fit": 9.2,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 8.69,
+      "logistics_fit": 4.2,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-03",
+      "response_rate": "55%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0079064",
+    "rank": 38,
+    "score": 84.34,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include OpenSearch, Semantic Search, LlamaIndex, Fine-tuning LLMs; 5.2 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Senior Data Scientist",
+    "location": "Noida, Uttar Pradesh",
+    "experience_years": 5.2,
+    "top_skills": [
+      "OpenSearch",
+      "Semantic Search",
+      "LlamaIndex",
+      "Fine-tuning LLMs",
+      "Pinecone",
+      "QLoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "5.2 years experience",
+      "product",
+      "fintech"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "120-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.82,
+      "core_skill_fit": 9.6,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 8.69,
+      "logistics_fit": 4.08,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-13",
+      "response_rate": "91%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0081053",
+    "rank": 39,
+    "score": 84.28,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include Machine Learning, QLoRA, OpenSearch, Weaviate; 5.4 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "NLP Engineer",
+    "location": "Chandigarh, Chandigarh",
+    "experience_years": 5.4,
+    "top_skills": [
+      "Machine Learning",
+      "QLoRA",
+      "OpenSearch",
+      "Weaviate",
+      "pgvector",
+      "LoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "5.4 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 27.8,
+      "career_evidence": 18.15,
+      "core_skill_fit": 8.16,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 8.49,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-31",
+      "response_rate": "83%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0007009",
+    "rank": 40,
+    "score": 84.12,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include QLoRA, Learning to Rank, BM25, Python; 7.9 years experience. Minor concern: Ranking evaluation metrics are not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Noida, Uttar Pradesh",
+    "experience_years": 7.9,
+    "top_skills": [
+      "QLoRA",
+      "Learning to Rank",
+      "BM25",
+      "Python",
+      "Embeddings",
+      "OpenSearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "7.9 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.6,
+      "core_skill_fit": 8.08,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 9.56,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-19",
+      "response_rate": "62%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0064904",
+    "rank": 41,
+    "score": 83.9,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include Embeddings, Python, Prompt Engineering, TensorFlow; 4.9 years experience. Minor concern: 90-day notice period; Relocation willingness not shown.",
+    "title": "AI Engineer",
+    "location": "Hyderabad, Telangana",
+    "experience_years": 4.9,
+    "top_skills": [
+      "Embeddings",
+      "Python",
+      "Prompt Engineering",
+      "TensorFlow",
+      "LLMs",
+      "Elasticsearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "4.9 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "90-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.15,
+      "core_skill_fit": 10.56,
+      "seniority_fit": 8.2,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.79,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-17",
+      "response_rate": "78%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0057563",
+    "rank": 42,
+    "score": 83.75,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Prompt Engineering, Machine Learning, Hugging Face Transformers, RAG; 6.8 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "NLP Engineer",
+    "location": "Indore, Madhya Pradesh",
+    "experience_years": 6.8,
+    "top_skills": [
+      "Prompt Engineering",
+      "Machine Learning",
+      "Hugging Face Transformers",
+      "RAG",
+      "QLoRA",
+      "Deep Learning"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "6.8 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 7.92,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 6.99,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-04-21",
+      "response_rate": "83%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0010257",
+    "rank": 43,
+    "score": 83.34,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include Recommendation Systems, TensorFlow, Milvus, Python; 6.5 years experience. Minor concern: 120-day notice period.",
+    "title": "Senior Data Scientist",
+    "location": "Noida, Uttar Pradesh",
+    "experience_years": 6.5,
+    "top_skills": [
+      "Recommendation Systems",
+      "TensorFlow",
+      "Milvus",
+      "Python",
+      "Qdrant",
+      "MLflow"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "6.5 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "120-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.15,
+      "core_skill_fit": 8.4,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 7.83,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-13",
+      "response_rate": "72%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0011687",
+    "rank": 44,
+    "score": 83.21,
+    "reasoning": "Strong match because career history shows retrieval, embedding, recommendation; skills include LangChain, Embeddings, LlamaIndex, OpenSearch; 7.8 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Senior NLP Engineer",
+    "location": "Indore, Madhya Pradesh",
+    "experience_years": 7.8,
+    "top_skills": [
+      "LangChain",
+      "Embeddings",
+      "LlamaIndex",
+      "OpenSearch",
+      "Weaviate",
+      "PEFT"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.8 years experience",
+      "product",
+      "ai",
+      "open to work",
+      "active 45 days ago"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.53,
+      "core_skill_fit": 8.96,
+      "seniority_fit": 10.0,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-10",
+      "response_rate": "89%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0094056",
+    "rank": 45,
+    "score": 83.14,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Embeddings, LlamaIndex, Pinecone, PEFT; 5.9 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "NLP Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 5.9,
+    "top_skills": [
+      "Embeddings",
+      "LlamaIndex",
+      "Pinecone",
+      "PEFT",
+      "Hugging Face Transformers",
+      "BM25"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "5.9 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work"
+    ],
+    "score_breakdown": {
+      "semantic_match": 26.7,
+      "career_evidence": 20.68,
+      "core_skill_fit": 9.2,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 5.59,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-04-16",
+      "response_rate": "82%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0086151",
+    "rank": 46,
+    "score": 83.04,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include LangChain, Qdrant, Elasticsearch, Sentence Transformers; 7.7 years experience. Minor concern: Python is not explicit; 120-day notice period.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 7.7,
+    "top_skills": [
+      "LangChain",
+      "Qdrant",
+      "Elasticsearch",
+      "Sentence Transformers",
+      "Embeddings",
+      "Time Series"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "7.7 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "120-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.6,
+      "core_skill_fit": 9.2,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.04,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-23",
+      "response_rate": "52%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0065195",
+    "rank": 47,
+    "score": 82.81,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include LlamaIndex, LLMs, Elasticsearch, QLoRA; 5.1 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Search Engineer",
+    "location": "Kolkata, West Bengal",
+    "experience_years": 5.1,
+    "top_skills": [
+      "LlamaIndex",
+      "LLMs",
+      "Elasticsearch",
+      "QLoRA",
+      "scikit-learn",
+      "pgvector"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.1 years experience",
+      "product",
+      "internet",
+      "open to work",
+      "active 31 days ago"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.29,
+      "core_skill_fit": 8.32,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-24",
+      "response_rate": "80%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0020877",
+    "rank": 48,
+    "score": 82.71,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Information Retrieval, QLoRA, LlamaIndex, Elasticsearch; 5.1 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Gurgaon, Haryana",
+    "experience_years": 5.1,
+    "top_skills": [
+      "Information Retrieval",
+      "QLoRA",
+      "LlamaIndex",
+      "Elasticsearch",
+      "scikit-learn",
+      "Deep Learning"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "5.1 years experience",
+      "product",
+      "fintech"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.82,
+      "core_skill_fit": 8.56,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 6.65,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-04-03",
+      "response_rate": "66%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0076251",
+    "rank": 49,
+    "score": 82.58,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include Hugging Face Transformers, Learning to Rank, PEFT, Image Classification; 7.6 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Search Engineer",
+    "location": "Bhubaneswar, Odisha",
+    "experience_years": 7.6,
+    "top_skills": [
+      "Hugging Face Transformers",
+      "Learning to Rank",
+      "PEFT",
+      "Image Classification",
+      "Forecasting",
+      "LLMs"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "7.6 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "GitHub not linked"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 19.25,
+      "core_skill_fit": 5.76,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.25,
+      "logistics_fit": 4.92,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-15",
+      "response_rate": "51%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0060054",
+    "rank": 50,
+    "score": 82.46,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include TensorFlow, Recommendation Systems, Prompt Engineering, Semantic Search; 6.4 years experience. Minor concern: Python is not explicit; Not marked open to work.",
+    "title": "AI Engineer",
+    "location": "Jaipur, Rajasthan",
+    "experience_years": 6.4,
+    "top_skills": [
+      "TensorFlow",
+      "Recommendation Systems",
+      "Prompt Engineering",
+      "Semantic Search",
+      "Elasticsearch",
+      "FAISS"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "6.4 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Not marked open to work",
+      "GitHub not linked"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 7.68,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 6.26,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-03-17",
+      "response_rate": "86%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0091534",
+    "rank": 51,
+    "score": 82.29,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include LlamaIndex, LangChain, scikit-learn, RAG; 16.6 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "AI Engineer",
+    "location": "Gurgaon, Haryana",
+    "experience_years": 16.6,
+    "top_skills": [
+      "LlamaIndex",
+      "LangChain",
+      "scikit-learn",
+      "RAG",
+      "Sentence Transformers",
+      "Diffusion Models"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "product",
+      "software",
+      "active 50 days ago"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Above target range and may be less hands-on",
+      "Not marked open to work"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 10.88,
+      "seniority_fit": 4.2,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.89,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-05",
+      "response_rate": "84%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0055992",
+    "rank": 52,
+    "score": 82.23,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Deep Learning, Information Retrieval, Fine-tuning LLMs, OpenSearch; 16.9 years experience. Minor concern: Python is not explicit; Above target range and may be less hands-on.",
+    "title": "AI Engineer",
+    "location": "Sydney",
+    "experience_years": 16.9,
+    "top_skills": [
+      "Deep Learning",
+      "Information Retrieval",
+      "Fine-tuning LLMs",
+      "OpenSearch",
+      "FAISS",
+      "Milvus"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "product",
+      "e-commerce",
+      "open to work"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Above target range and may be less hands-on",
+      "Outside India (Australia)"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.02,
+      "core_skill_fit": 11.12,
+      "seniority_fit": 4.2,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 9.37,
+      "logistics_fit": 3.12,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-28",
+      "response_rate": "72%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0030031",
+    "rank": 53,
+    "score": 82.15,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include scikit-learn, NLP, Vector Search, QLoRA; 5.7 years experience. Minor concern: Several AI skills are weakly supported by career text; Not marked open to work.",
+    "title": "AI Engineer",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 5.7,
+    "top_skills": [
+      "scikit-learn",
+      "NLP",
+      "Vector Search",
+      "QLoRA",
+      "RAG",
+      "LoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "5.7 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.15,
+      "core_skill_fit": 6.64,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.68,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-22",
+      "response_rate": "94%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0052328",
+    "rank": 54,
+    "score": 82.04,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include QLoRA, Learning to Rank, Vector Search, OpenSearch; 6.5 years experience. Minor concern: Ranking evaluation metrics are not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Pune, Maharashtra",
+    "experience_years": 6.5,
+    "top_skills": [
+      "QLoRA",
+      "Learning to Rank",
+      "Vector Search",
+      "OpenSearch",
+      "Sentence Transformers",
+      "scikit-learn"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "6.5 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.4,
+      "core_skill_fit": 7.2,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-31",
+      "response_rate": "79%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0075574",
+    "rank": 55,
+    "score": 81.94,
+    "reasoning": "Strong match because career history shows embedding, embeddings, rag; skills include PyTorch, Weaviate, pgvector, scikit-learn; 5.7 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Machine Learning Engineer",
+    "location": "Bangalore, Karnataka",
+    "experience_years": 5.7,
+    "top_skills": [
+      "PyTorch",
+      "Weaviate",
+      "pgvector",
+      "scikit-learn",
+      "Qdrant",
+      "OpenSearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.7 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 38 days ago"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.86,
+      "core_skill_fit": 10.08,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 8.32,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-17",
+      "response_rate": "58%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0096172",
+    "rank": 56,
+    "score": 81.9,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include RAG, Elasticsearch, OpenSearch, Qdrant; 5.2 years experience. Minor concern: Several AI skills are weakly supported by career text; Not marked open to work.",
+    "title": "NLP Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 5.2,
+    "top_skills": [
+      "RAG",
+      "Elasticsearch",
+      "OpenSearch",
+      "Qdrant",
+      "Fine-tuning LLMs",
+      "Hugging Face Transformers"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "5.2 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 8.56,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 6.62,
+      "logistics_fit": 4.2,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-03",
+      "response_rate": "47%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0081852",
+    "rank": 57,
+    "score": 81.9,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include LoRA, Haystack, pgvector, Vector Search; 5.9 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Senior Data Scientist",
+    "location": "Delhi, Delhi",
+    "experience_years": 5.9,
+    "top_skills": [
+      "LoRA",
+      "Haystack",
+      "pgvector",
+      "Vector Search",
+      "Milvus",
+      "Semantic Search"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.9 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 32 days ago"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.29,
+      "core_skill_fit": 7.92,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 9.01,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-23",
+      "response_rate": "44%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0066376",
+    "rank": 58,
+    "score": 81.87,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include LoRA, LlamaIndex, BM25, FAISS; 5.7 years experience. Minor concern: Python is not explicit; GitHub not linked.",
+    "title": "Applied ML Engineer",
+    "location": "Mumbai, Maharashtra",
+    "experience_years": 5.7,
+    "top_skills": [
+      "LoRA",
+      "LlamaIndex",
+      "BM25",
+      "FAISS",
+      "Information Retrieval",
+      "LLMs"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "5.7 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "GitHub not linked",
+      "90-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 7.28,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 6.71,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-03",
+      "response_rate": "51%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0074735",
+    "rank": 59,
+    "score": 81.85,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include Prompt Engineering, RAG, LlamaIndex, Information Retrieval; 5.5 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Chandigarh, Chandigarh",
+    "experience_years": 5.5,
+    "top_skills": [
+      "Prompt Engineering",
+      "RAG",
+      "LlamaIndex",
+      "Information Retrieval",
+      "Learning to Rank",
+      "Vector Search"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.5 years experience",
+      "product",
+      "ai",
+      "open to work",
+      "active 88 days ago"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "90-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.29,
+      "core_skill_fit": 9.84,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 8.92,
+      "logistics_fit": 4.2,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-28",
+      "response_rate": "77%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0099401",
+    "rank": 60,
+    "score": 81.79,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include scikit-learn, Embeddings, Haystack, Qdrant; 7.7 years experience. Minor concern: Not marked open to work; 90-day notice period.",
+    "title": "NLP Engineer",
+    "location": "Ahmedabad, Gujarat",
+    "experience_years": 7.7,
+    "top_skills": [
+      "scikit-learn",
+      "Embeddings",
+      "Haystack",
+      "Qdrant",
+      "Semantic Search",
+      "LlamaIndex"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "7.7 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Not marked open to work",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 19.58,
+      "core_skill_fit": 7.28,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 5.01,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-27",
+      "response_rate": "42%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0013613",
+    "rank": 61,
+    "score": 81.61,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include TensorFlow, Fine-tuning LLMs, scikit-learn, Weaviate; 4.7 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Machine Learning Engineer",
+    "location": "Singapore",
+    "experience_years": 4.7,
+    "top_skills": [
+      "TensorFlow",
+      "Fine-tuning LLMs",
+      "scikit-learn",
+      "Weaviate",
+      "Machine Learning",
+      "Sentence Transformers"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "4.7 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Outside India (Singapore)",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 9.2,
+      "seniority_fit": 8.2,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.49,
+      "logistics_fit": 2.4,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-23",
+      "response_rate": "73%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0081686",
+    "rank": 62,
+    "score": 81.6,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Python, Milvus, Semantic Search, LLMs; 6.0 years experience. Minor concern: Not marked open to work; Outside India (USA).",
+    "title": "Search Engineer",
+    "location": "Austin",
+    "experience_years": 6.0,
+    "top_skills": [
+      "Python",
+      "Milvus",
+      "Semantic Search",
+      "LLMs",
+      "LangChain",
+      "Embeddings"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "6.0 years experience",
+      "product",
+      "saas"
+    ],
+    "concerns": [
+      "Not marked open to work",
+      "Outside India (USA)",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 9.2,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 6.68,
+      "logistics_fit": 2.4,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-04-25",
+      "response_rate": "91%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0041669",
+    "rank": 63,
+    "score": 81.53,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include PEFT, Milvus, Semantic Search, Weaviate; 8.0 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Noida, Uttar Pradesh",
+    "experience_years": 8.0,
+    "top_skills": [
+      "PEFT",
+      "Milvus",
+      "Semantic Search",
+      "Weaviate",
+      "Time Series",
+      "Prompt Engineering"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "8.0 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 79 days ago"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.97,
+      "core_skill_fit": 8.96,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 4.2,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-06",
+      "response_rate": "77%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0011162",
+    "rank": 64,
+    "score": 81.34,
+    "reasoning": "Strong match because career history shows production ml, recommendation, ml pipeline; skills include OpenSearch, LoRA, FAISS, LangChain; 5.8 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Several AI skills are weakly supported by career text.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Coimbatore, Tamil Nadu",
+    "experience_years": 5.8,
+    "top_skills": [
+      "OpenSearch",
+      "LoRA",
+      "FAISS",
+      "LangChain",
+      "Vector Search",
+      "Pinecone"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "recommendation",
+      "5.8 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Several AI skills are weakly supported by career text",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.4,
+      "core_skill_fit": 8.64,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.38,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-10",
+      "response_rate": "75%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0053695",
+    "rank": 65,
+    "score": 81.3,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, recommendation; skills include LangChain, Recommendation Systems, Embeddings, Pinecone; 5.8 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Python is not explicit.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Bhubaneswar, Odisha",
+    "experience_years": 5.8,
+    "top_skills": [
+      "LangChain",
+      "Recommendation Systems",
+      "Embeddings",
+      "Pinecone",
+      "TensorFlow",
+      "pgvector"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.8 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 83 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 14.74,
+      "core_skill_fit": 8.56,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 9.16,
+      "logistics_fit": 4.68,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-02",
+      "response_rate": "60%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0031593",
+    "rank": 66,
+    "score": 81.28,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include Elasticsearch, BM25, Embeddings, Haystack; 7.8 years experience. Minor concern: Python is not explicit; 90-day notice period.",
+    "title": "Search Engineer",
+    "location": "Kolkata, West Bengal",
+    "experience_years": 7.8,
+    "top_skills": [
+      "Elasticsearch",
+      "BM25",
+      "Embeddings",
+      "Haystack",
+      "LangChain",
+      "OpenCV"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.8 years experience",
+      "product",
+      "e-commerce",
+      "Kolkata, West Bengal",
+      "remote work preference"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.29,
+      "core_skill_fit": 9.6,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 6.71,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-19",
+      "response_rate": "58%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0064326",
+    "rank": 67,
+    "score": 81.26,
+    "reasoning": "Strong match because career history shows embedding, embeddings, rag; skills include Deep Learning, RAG, Weaviate, Python; 7.6 years experience. Minor concern: Several AI skills are weakly supported by career text; Relocation willingness not shown.",
+    "title": "Search Engineer",
+    "location": "Gurgaon, Haryana",
+    "experience_years": 7.6,
+    "top_skills": [
+      "Deep Learning",
+      "RAG",
+      "Weaviate",
+      "Python",
+      "PyTorch",
+      "QLoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.6 years experience",
+      "product",
+      "saas",
+      "open to work",
+      "active 34 days ago"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.86,
+      "core_skill_fit": 8.8,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 4.2,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-21",
+      "response_rate": "94%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0030348",
+    "rank": 68,
+    "score": 81.26,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include pgvector, Python, Haystack, PyTorch; 4.5 years experience. Minor concern: GitHub not linked.",
+    "title": "Machine Learning Engineer",
+    "location": "Noida, Uttar Pradesh",
+    "experience_years": 4.5,
+    "top_skills": [
+      "pgvector",
+      "Python",
+      "Haystack",
+      "PyTorch",
+      "LlamaIndex",
+      "GANs"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "4.5 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "GitHub not linked"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 7.52,
+      "seniority_fit": 8.2,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 8.82,
+      "logistics_fit": 4.2,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-30",
+      "response_rate": "54%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0080766",
+    "rank": 69,
+    "score": 81.08,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Deep Learning, Search Infrastructure, Python, QLoRA; 8.8 years experience. Minor concern: Several AI skills are weakly supported by career text; Not marked open to work.",
+    "title": "Staff Machine Learning Engineer",
+    "location": "Coimbatore, Tamil Nadu",
+    "experience_years": 8.8,
+    "top_skills": [
+      "Deep Learning",
+      "Search Infrastructure",
+      "Python",
+      "QLoRA",
+      "Search & Discovery",
+      "Search Backend"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "8.8 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 20.35,
+      "core_skill_fit": 3.68,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 7.45,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-04-09",
+      "response_rate": "66%",
+      "notice_period": "0 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0058688",
+    "rank": 70,
+    "score": 80.99,
+    "reasoning": "Strong match because career history shows production ml, embedding, embeddings; skills include LlamaIndex, Machine Learning, scikit-learn, Information Retrieval; 6.7 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "AI Engineer",
+    "location": "Berlin",
+    "experience_years": 6.7,
+    "top_skills": [
+      "LlamaIndex",
+      "Machine Learning",
+      "scikit-learn",
+      "Information Retrieval",
+      "Embeddings",
+      "Milvus"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "embedding",
+      "6.7 years experience",
+      "open to work",
+      "active 88 days ago"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Outside India (Germany)"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.15,
+      "core_skill_fit": 6.8,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.04,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 3.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-28",
+      "response_rate": "74%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0041611",
+    "rank": 71,
+    "score": 80.83,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include LangChain, OpenSearch, PyTorch, Qdrant; 6.4 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Staff Machine Learning Engineer",
+    "location": "Austin",
+    "experience_years": 6.4,
+    "top_skills": [
+      "LangChain",
+      "OpenSearch",
+      "PyTorch",
+      "Qdrant",
+      "Prompt Engineering",
+      "pgvector"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "6.4 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work",
+      "inactive for 203 days",
+      "Outside India (USA)"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 22.0,
+      "core_skill_fit": 8.32,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.88,
+      "behavioral_signal_fit": 2.63,
+      "logistics_fit": 3.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2025-12-03",
+      "response_rate": "7%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0042506",
+    "rank": 72,
+    "score": 80.67,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include NLP, FAISS, PEFT, Milvus; 4.2 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Search Engineer",
+    "location": "Mumbai, Maharashtra",
+    "experience_years": 4.2,
+    "top_skills": [
+      "NLP",
+      "FAISS",
+      "PEFT",
+      "Milvus",
+      "Information Retrieval",
+      "Qdrant"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "4.2 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 33 days ago"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.86,
+      "core_skill_fit": 9.2,
+      "seniority_fit": 8.2,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 9.97,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-22",
+      "response_rate": "48%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0054123",
+    "rank": 73,
+    "score": 80.58,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Weaviate, Fine-tuning LLMs, LangChain, LLMs; 4.7 years experience. Minor concern: Several AI skills are weakly supported by career text; Not marked open to work.",
+    "title": "Applied ML Engineer",
+    "location": "Gurgaon, Haryana",
+    "experience_years": 4.7,
+    "top_skills": [
+      "Weaviate",
+      "Fine-tuning LLMs",
+      "LangChain",
+      "LLMs",
+      "Qdrant",
+      "pgvector"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "4.7 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 7.52,
+      "seniority_fit": 8.2,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 6.74,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-08",
+      "response_rate": "87%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0007412",
+    "rank": 74,
+    "score": 80.38,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include BM25, PyTorch, Pinecone, Recommendation Systems; 7.4 years experience. Minor concern: Python is not explicit; 120-day notice period.",
+    "title": "Applied ML Engineer",
+    "location": "Noida, Uttar Pradesh",
+    "experience_years": 7.4,
+    "top_skills": [
+      "BM25",
+      "PyTorch",
+      "Pinecone",
+      "Recommendation Systems",
+      "Milvus",
+      "scikit-learn"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.4 years experience",
+      "product",
+      "saas",
+      "open to work",
+      "active 66 days ago"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "120-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.29,
+      "core_skill_fit": 8.08,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.53,
+      "logistics_fit": 4.08,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-19",
+      "response_rate": "76%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0062247",
+    "rank": 75,
+    "score": 80.3,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, faiss; skills include Hugging Face Transformers, Deep Learning, Vector Search, BM25; 7.3 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "AI Engineer",
+    "location": "Kochi, Kerala",
+    "experience_years": 7.3,
+    "top_skills": [
+      "Hugging Face Transformers",
+      "Deep Learning",
+      "Vector Search",
+      "BM25",
+      "Qdrant",
+      "Pinecone"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.3 years experience",
+      "product",
+      "internet",
+      "open to work",
+      "active 62 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.1,
+      "core_skill_fit": 8.4,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.4,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-23",
+      "response_rate": "78%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0026532",
+    "rank": 76,
+    "score": 80.23,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include Embeddings, Milvus, Semantic Search, BentoML; 4.8 years experience. Minor concern: Python is not explicit; 90-day notice period.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 4.8,
+    "top_skills": [
+      "Embeddings",
+      "Milvus",
+      "Semantic Search",
+      "BentoML",
+      "Information Retrieval",
+      "Time Series"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "4.8 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.6,
+      "core_skill_fit": 8.56,
+      "seniority_fit": 8.2,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 6.75,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-28",
+      "response_rate": "52%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0040887",
+    "rank": 77,
+    "score": 79.86,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include PEFT, Recommendation Systems, LangChain, Python; 4.7 years experience. Minor concern: Ranking evaluation metrics are not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Machine Learning Engineer",
+    "location": "Toronto",
+    "experience_years": 4.7,
+    "top_skills": [
+      "PEFT",
+      "Recommendation Systems",
+      "LangChain",
+      "Python",
+      "LoRA",
+      "Milvus"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "4.7 years experience",
+      "product",
+      "ai"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Outside India (Canada)",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 17.82,
+      "core_skill_fit": 7.44,
+      "seniority_fit": 8.2,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 9.92,
+      "logistics_fit": 2.88,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-24",
+      "response_rate": "84%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0088025",
+    "rank": 78,
+    "score": 79.61,
+    "reasoning": "Strong match because career history shows retrieval, embedding, recommendation; skills include Elasticsearch, Learning to Rank, RAG, BM25; 8.6 years experience. Minor concern: 90-day notice period; Relocation willingness not shown.",
+    "title": "Staff Machine Learning Engineer",
+    "location": "Jaipur, Rajasthan",
+    "experience_years": 8.6,
+    "top_skills": [
+      "Elasticsearch",
+      "Learning to Rank",
+      "RAG",
+      "BM25",
+      "LLMs",
+      "Python"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "8.6 years experience",
+      "product",
+      "ai",
+      "open to work",
+      "active 41 days ago"
+    ],
+    "concerns": [
+      "90-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.53,
+      "core_skill_fit": 7.52,
+      "seniority_fit": 10.0,
+      "product_company_fit": 7.44,
+      "behavioral_signal_fit": 8.32,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-14",
+      "response_rate": "83%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0093912",
+    "rank": 79,
+    "score": 79.54,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, faiss; skills include Milvus, Elasticsearch, Vector Search, Haystack; 5.3 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Senior Data Scientist",
+    "location": "Chandigarh, Chandigarh",
+    "experience_years": 5.3,
+    "top_skills": [
+      "Milvus",
+      "Elasticsearch",
+      "Vector Search",
+      "Haystack",
+      "Embeddings",
+      "Recommendation Systems"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.3 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 44 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.1,
+      "core_skill_fit": 7.76,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-11",
+      "response_rate": "66%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0017960",
+    "rank": 80,
+    "score": 79.41,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include QLoRA, Hugging Face Transformers, Information Retrieval, Haystack; 7.7 years experience. Minor concern: no major trap indicators detected.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Bangalore, Karnataka",
+    "experience_years": 7.7,
+    "top_skills": [
+      "QLoRA",
+      "Hugging Face Transformers",
+      "Information Retrieval",
+      "Haystack",
+      "Qdrant",
+      "PEFT"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.7 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 58 days ago"
+    ],
+    "concerns": [],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 11.11,
+      "core_skill_fit": 9.6,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 9.02,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-27",
+      "response_rate": "72%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0001610",
+    "rank": 81,
+    "score": 79.24,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, embedding; skills include scikit-learn, FAISS, PyTorch, Haystack; 3.0 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Machine Learning Engineer",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 3.0,
+    "top_skills": [
+      "scikit-learn",
+      "FAISS",
+      "PyTorch",
+      "Haystack",
+      "Fine-tuning LLMs",
+      "Milvus"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "retrieval",
+      "semantic search",
+      "product",
+      "saas",
+      "open to work"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 18.92,
+      "core_skill_fit": 7.28,
+      "seniority_fit": 5.8,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.32,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-12",
+      "response_rate": "57%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0049538",
+    "rank": 82,
+    "score": 79.1,
+    "reasoning": "Strong match because career history shows production ml, recommendation, ml pipeline; skills include Elasticsearch, Milvus, LLMs, LlamaIndex; 5.8 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Jaipur, Rajasthan",
+    "experience_years": 5.8,
+    "top_skills": [
+      "Elasticsearch",
+      "Milvus",
+      "LLMs",
+      "LlamaIndex",
+      "OpenSearch",
+      "PyTorch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.8 years experience",
+      "product",
+      "saas",
+      "active 28 days ago",
+      "72% recruiter response rate"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Not marked open to work",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.43,
+      "core_skill_fit": 9.04,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.95,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-27",
+      "response_rate": "72%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0049896",
+    "rank": 83,
+    "score": 79.0,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include Information Retrieval, LangChain, LlamaIndex, Fine-tuning LLMs; 7.3 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Search Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 7.3,
+    "top_skills": [
+      "Information Retrieval",
+      "LangChain",
+      "LlamaIndex",
+      "Fine-tuning LLMs",
+      "NLP",
+      "Data Science"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.3 years experience",
+      "product",
+      "e-commerce",
+      "Vizag, Andhra Pradesh",
+      "hybrid work preference"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "GitHub not linked",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.86,
+      "core_skill_fit": 8.56,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 6.9,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-17",
+      "response_rate": "43%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0054394",
+    "rank": 84,
+    "score": 78.85,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, recommendation; skills include Prompt Engineering, Haystack, Fine-tuning LLMs, scikit-learn; 4.1 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Pune, Maharashtra",
+    "experience_years": 4.1,
+    "top_skills": [
+      "Prompt Engineering",
+      "Haystack",
+      "Fine-tuning LLMs",
+      "scikit-learn",
+      "Embeddings",
+      "Time Series"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "4.1 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 51 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.21,
+      "core_skill_fit": 9.84,
+      "seniority_fit": 8.2,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 9.16,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-04",
+      "response_rate": "64%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0040117",
+    "rank": 85,
+    "score": 78.78,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include LlamaIndex, Embeddings, Prompt Engineering, RAG; 6.5 years experience. Minor concern: Python is not explicit; GitHub not linked.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 6.5,
+    "top_skills": [
+      "LlamaIndex",
+      "Embeddings",
+      "Prompt Engineering",
+      "RAG",
+      "BM25",
+      "FAISS"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "6.5 years experience",
+      "product",
+      "software",
+      "open to work",
+      "fast recruiter response time"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "GitHub not linked",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.54,
+      "core_skill_fit": 7.44,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 9.12,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-17",
+      "response_rate": "66%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0052682",
+    "rank": 86,
+    "score": 78.73,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include Python, QLoRA, Embeddings, Semantic Search; 6.6 years experience. Minor concern: Several AI skills are weakly supported by career text; Relocation willingness not shown.",
+    "title": "NLP Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 6.6,
+    "top_skills": [
+      "Python",
+      "QLoRA",
+      "Embeddings",
+      "Semantic Search",
+      "PyTorch",
+      "LLMs"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "6.6 years experience",
+      "product",
+      "software",
+      "open to work",
+      "active 88 days ago"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 27.79,
+      "career_evidence": 13.86,
+      "core_skill_fit": 6.8,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 4.68,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-28",
+      "response_rate": "88%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0036863",
+    "rank": 87,
+    "score": 78.62,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include Prompt Engineering, FAISS, Qdrant, LoRA; 4.3 years experience. Minor concern: Ranking evaluation metrics are not explicit; Python is not explicit.",
+    "title": "Senior Data Scientist",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 4.3,
+    "top_skills": [
+      "Prompt Engineering",
+      "FAISS",
+      "Qdrant",
+      "LoRA",
+      "OpenSearch",
+      "LlamaIndex"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "4.3 years experience",
+      "product",
+      "saas",
+      "open to work",
+      "active 70 days ago"
+    ],
+    "concerns": [
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "GitHub not linked"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.76,
+      "core_skill_fit": 8.56,
+      "seniority_fit": 8.2,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 9.18,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-15",
+      "response_rate": "46%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0016163",
+    "rank": 88,
+    "score": 78.5,
+    "reasoning": "Strong match because career history shows production ml, retrieval, semantic search; skills include pgvector, TensorFlow, Machine Learning, Weaviate; 6.7 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Gurgaon, Haryana",
+    "experience_years": 6.7,
+    "top_skills": [
+      "pgvector",
+      "TensorFlow",
+      "Machine Learning",
+      "Weaviate",
+      "LoRA",
+      "Time Series"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "retrieval",
+      "6.7 years experience",
+      "product",
+      "internet"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "120-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 22.05,
+      "career_evidence": 19.25,
+      "core_skill_fit": 8.16,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 8.8,
+      "logistics_fit": 4.08,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-11",
+      "response_rate": "72%",
+      "notice_period": "120 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0011432",
+    "rank": 89,
+    "score": 78.17,
+    "reasoning": "Strong match because career history shows embedding, embeddings, rag; skills include Haystack, pgvector, QLoRA, PEFT; 7.6 years experience. Minor concern: Python is not explicit; Several AI skills are weakly supported by career text.",
+    "title": "Senior Data Scientist",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 7.6,
+    "top_skills": [
+      "Haystack",
+      "pgvector",
+      "QLoRA",
+      "PEFT",
+      "Machine Learning",
+      "Elasticsearch"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.6 years experience",
+      "product",
+      "internet",
+      "open to work",
+      "86% profile completeness"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 11.0,
+      "core_skill_fit": 9.84,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 8.38,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-16",
+      "response_rate": "67%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0022812",
+    "rank": 90,
+    "score": 78.08,
+    "reasoning": "Strong match because career history shows production ml, recommendation, ml pipeline; skills include NLP, Pinecone, LLMs, Prompt Engineering; 4.5 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Python is not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Coimbatore, Tamil Nadu",
+    "experience_years": 4.5,
+    "top_skills": [
+      "NLP",
+      "Pinecone",
+      "LLMs",
+      "Prompt Engineering",
+      "Sentence Transformers",
+      "TensorFlow"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "production ml",
+      "recommendation",
+      "4.5 years experience",
+      "product",
+      "e-commerce"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Not marked open to work",
+      "GitHub not linked"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 16.72,
+      "core_skill_fit": 7.04,
+      "seniority_fit": 8.2,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 6.2,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-03-19",
+      "response_rate": "79%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0036184",
+    "rank": 91,
+    "score": 77.74,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, recommendation; skills include Semantic Search, Hugging Face Transformers, QLoRA, PyTorch; 6.0 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 6.0,
+    "top_skills": [
+      "Semantic Search",
+      "Hugging Face Transformers",
+      "QLoRA",
+      "PyTorch",
+      "Sentence Transformers",
+      "Embeddings"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "6.0 years experience",
+      "product",
+      "fintech",
+      "open to work",
+      "active 29 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 10.78,
+      "core_skill_fit": 7.52,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 5.28,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-26",
+      "response_rate": "90%",
+      "notice_period": "30 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0039383",
+    "rank": 92,
+    "score": 77.64,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, faiss; skills include FAISS, Elasticsearch, Prompt Engineering, Vector Search; 7.1 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Python is not explicit.",
+    "title": "Applied ML Engineer",
+    "location": "Gurgaon, Haryana",
+    "experience_years": 7.1,
+    "top_skills": [
+      "FAISS",
+      "Elasticsearch",
+      "Prompt Engineering",
+      "Vector Search",
+      "QLoRA",
+      "Hugging Face Transformers"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.1 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "89% profile completeness"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Python is not explicit",
+      "90-day notice period"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.2,
+      "core_skill_fit": 7.28,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.84,
+      "logistics_fit": 4.92,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-19",
+      "response_rate": "61%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0032515",
+    "rank": 93,
+    "score": 77.59,
+    "reasoning": "Strong match because career history shows production ml, ml pipeline, feature pipeline; skills include Elasticsearch, Semantic Search, Vector Search, NLP; 5.1 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Python is not explicit.",
+    "title": "Machine Learning Engineer",
+    "location": "Seattle",
+    "experience_years": 5.1,
+    "top_skills": [
+      "Elasticsearch",
+      "Semantic Search",
+      "Vector Search",
+      "NLP",
+      "PyTorch",
+      "QLoRA"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.1 years experience",
+      "product",
+      "saas",
+      "active 41 days ago",
+      "fast recruiter response time"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Python is not explicit",
+      "Not marked open to work",
+      "Outside India (USA)",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.29,
+      "core_skill_fit": 7.76,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 7.74,
+      "logistics_fit": 2.4,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": false,
+      "last_active": "2026-05-14",
+      "response_rate": "54%",
+      "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0006418",
+    "rank": 94,
+    "score": 77.55,
+    "reasoning": "Strong match because career history shows production ml, ml pipeline, mlflow; skills include OpenSearch, Qdrant, Embeddings, Semantic Search; 5.7 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Python is not explicit.",
+    "title": "Machine Learning Engineer",
+    "location": "Gurgaon, Haryana",
+    "experience_years": 5.7,
+    "top_skills": [
+      "OpenSearch",
+      "Qdrant",
+      "Embeddings",
+      "Semantic Search",
+      "Weaviate",
+      "Learning to Rank"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.7 years experience",
+      "product",
+      "e-commerce",
+      "open to work",
+      "active 85 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.43,
+      "core_skill_fit": 5.6,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 9.84,
+      "logistics_fit": 5.52,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-31",
+      "response_rate": "92%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0041568",
+    "rank": 95,
+    "score": 77.53,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include Semantic Search, Weaviate, Qdrant, Pinecone; 5.2 years experience. Minor concern: Python is not explicit; GitHub not linked.",
+    "title": "Search Engineer",
+    "location": "Sydney",
+    "experience_years": 5.2,
+    "top_skills": [
+      "Semantic Search",
+      "Weaviate",
+      "Qdrant",
+      "Pinecone",
+      "TensorFlow",
+      "PEFT"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.2 years experience",
+      "product",
+      "software"
+    ],
+    "concerns": [
+      "Python is not explicit",
+      "GitHub not linked",
+      "90-day notice period",
+      "Outside India (Australia)",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 15.29,
+      "core_skill_fit": 8.8,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 6.64,
+      "logistics_fit": 2.4,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-06",
+      "response_rate": "52%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0044222",
+    "rank": 96,
+    "score": 77.38,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, faiss; skills include Deep Learning, OpenSearch, Hugging Face Transformers, LlamaIndex; 7.7 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Python is not explicit.",
+    "title": "AI Engineer",
+    "location": "Vizag, Andhra Pradesh",
+    "experience_years": 7.7,
+    "top_skills": [
+      "Deep Learning",
+      "OpenSearch",
+      "Hugging Face Transformers",
+      "LlamaIndex",
+      "LangChain",
+      "Feature Engineering"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "7.7 years experience",
+      "product",
+      "ai",
+      "open to work",
+      "active 40 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 13.2,
+      "core_skill_fit": 7.12,
+      "seniority_fit": 10.0,
+      "product_company_fit": 5.6,
+      "behavioral_signal_fit": 8.66,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-15",
+      "response_rate": "60%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0066999",
+    "rank": 97,
+    "score": 77.36,
+    "reasoning": "Strong match because career history shows production ml, recommendation, ml pipeline; skills include FAISS, BM25, Information Retrieval, OpenSearch; 5.9 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Delhi, Delhi",
+    "experience_years": 5.9,
+    "top_skills": [
+      "FAISS",
+      "BM25",
+      "Information Retrieval",
+      "OpenSearch",
+      "LLMs",
+      "Machine Learning"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "5.9 years experience",
+      "product",
+      "software",
+      "open to work",
+      "active 80 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text"
+    ],
+    "score_breakdown": {
+      "semantic_match": 26.33,
+      "career_evidence": 11.11,
+      "core_skill_fit": 7.52,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 6.0,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-05",
+      "response_rate": "63%",
+      "notice_period": "15 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0014440",
+    "rank": 98,
+    "score": 77.35,
+    "reasoning": "Strong match because career history shows production ml, recommendation, ml pipeline; skills include FAISS, Qdrant, Milvus, TensorFlow; 6.4 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "Recommendation Systems Engineer",
+    "location": "Chennai, Tamil Nadu",
+    "experience_years": 6.4,
+    "top_skills": [
+      "FAISS",
+      "Qdrant",
+      "Milvus",
+      "TensorFlow",
+      "Elasticsearch",
+      "Diffusion Models"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "6.4 years experience",
+      "product",
+      "saas",
+      "open to work",
+      "active 45 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 11.11,
+      "core_skill_fit": 7.04,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 10.0,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-10",
+      "response_rate": "64%",
+      "notice_period": "60 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0050876",
+    "rank": 99,
+    "score": 77.31,
+    "reasoning": "Strong match because career history shows embedding, embeddings, recommendation; skills include Sentence Transformers, Prompt Engineering, QLoRA, scikit-learn; 6.0 years experience. Minor concern: Several AI skills are weakly supported by career text; 90-day notice period.",
+    "title": "Applied ML Engineer",
+    "location": "Kolkata, West Bengal",
+    "experience_years": 6.0,
+    "top_skills": [
+      "Sentence Transformers",
+      "Prompt Engineering",
+      "QLoRA",
+      "scikit-learn",
+      "OpenSearch",
+      "Python"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "6.0 years experience",
+      "product",
+      "saas",
+      "open to work",
+      "active 29 days ago"
+    ],
+    "concerns": [
+      "Several AI skills are weakly supported by career text",
+      "90-day notice period",
+      "Relocation willingness not shown"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 11.0,
+      "core_skill_fit": 8.4,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 8.71,
+      "logistics_fit": 4.8,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-05-26",
+      "response_rate": "67%",
+      "notice_period": "90 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0050454",
+    "rank": 100,
+    "score": 76.75,
+    "reasoning": "Strong match because career history shows retrieval, semantic search, faiss; skills include BM25, PyTorch, Fine-tuning LLMs, LLMs; 6.8 years experience. Minor concern: Limited explicit vector database or embeddings evidence; Ranking evaluation metrics are not explicit.",
+    "title": "AI Engineer",
+    "location": "Delhi, Delhi",
+    "experience_years": 6.8,
+    "top_skills": [
+      "BM25",
+      "PyTorch",
+      "Fine-tuning LLMs",
+      "LLMs",
+      "QLoRA",
+      "scikit-learn"
+    ],
+    "risk_level": "Low",
+    "strengths": [
+      "6.8 years experience",
+      "product",
+      "software",
+      "open to work",
+      "active 58 days ago"
+    ],
+    "concerns": [
+      "Limited explicit vector database or embeddings evidence",
+      "Ranking evaluation metrics are not explicit",
+      "Python is not explicit",
+      "Several AI skills are weakly supported by career text",
+      "GitHub not linked"
+    ],
+    "score_breakdown": {
+      "semantic_match": 28.0,
+      "career_evidence": 12.1,
+      "core_skill_fit": 5.76,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.4,
+      "behavioral_signal_fit": 9.09,
+      "logistics_fit": 5.4,
+      "penalties": -0.0
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-04-27",
+      "response_rate": "77%",
+      "notice_period": "30 days"
+    }
+  }
+]

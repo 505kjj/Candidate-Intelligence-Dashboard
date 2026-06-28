@@ -23,6 +23,8 @@ export type Candidate = {
 };
 
 export type ShortlistStatus = {
+  localOutputExists: boolean;
+  bundledOutputExists: boolean;
   submissionExists: boolean;
   jsonExists: boolean;
   ready: boolean;
@@ -31,10 +33,14 @@ export type ShortlistStatus = {
   jsonModifiedAt: string | null;
   submissionPath: string;
   jsonPath: string;
+  source: CandidateSource;
 };
+
+export type CandidateSource = "local-output" | "bundled-generated" | "demo";
 
 export type CandidatesResponse = {
   demo: boolean;
+  source: CandidateSource;
   message: string;
   candidates: Candidate[];
 };
@@ -132,12 +138,48 @@ export const demoCandidates: Candidate[] = [
   }
 ];
 
-export const projectRoot = path.resolve(process.cwd(), "..");
+export function getProjectRoot() {
+  const cwd = process.cwd();
+  const parentRoot = path.resolve(cwd, "..");
+
+  if (fs.existsSync(path.join(parentRoot, "backend", "rank.py"))) {
+    return parentRoot;
+  }
+
+  if (fs.existsSync(path.join(cwd, "backend", "rank.py"))) {
+    return cwd;
+  }
+
+  return parentRoot;
+}
+
+export function getFrontendRoot() {
+  const cwd = process.cwd();
+
+  if (fs.existsSync(path.join(cwd, "public")) && fs.existsSync(path.join(cwd, "package.json"))) {
+    return cwd;
+  }
+
+  if (fs.existsSync(path.join(cwd, "frontend", "public"))) {
+    return path.join(cwd, "frontend");
+  }
+
+  return cwd;
+}
+
+export const projectRoot = getProjectRoot();
+export const frontendRoot = getFrontendRoot();
 export const outputPaths = {
   submission: path.join(projectRoot, "outputs", "submission.csv"),
   topCandidates: path.join(projectRoot, "outputs", "top_candidates.json"),
-  candidates: path.join(projectRoot, "data", "candidates.jsonl")
+  candidates: path.join(projectRoot, "data", "candidates.jsonl"),
+  bundledSubmission: path.join(frontendRoot, "public", "generated", "submission.csv"),
+  bundledTopCandidates: path.join(frontendRoot, "public", "generated", "top_candidates.json")
 };
+
+export function isVercelRuntime() {
+  return process.env.VERCEL === "1" || Boolean(process.env.VERCEL_ENV);
+}
 
 function modifiedAt(filePath: string): string | null {
   try {
@@ -147,32 +189,57 @@ function modifiedAt(filePath: string): string | null {
   }
 }
 
-export function getCandidates(): { candidates: Candidate[]; isDemo: boolean } {
+function readCandidates(filePath: string): Candidate[] | null {
   try {
-    const raw = fs.readFileSync(outputPaths.topCandidates, "utf-8");
+    const raw = fs.readFileSync(filePath, "utf-8");
     const parsed = JSON.parse(raw) as Candidate[];
     if (Array.isArray(parsed) && parsed.length > 0) {
-      return { candidates: parsed, isDemo: false };
+      return parsed;
     }
   } catch {
-    return { candidates: demoCandidates, isDemo: true };
+    return null;
   }
-  return { candidates: demoCandidates, isDemo: true };
+  return null;
+}
+
+export function getCandidates(): { candidates: Candidate[]; source: CandidateSource } {
+  const localCandidates = readCandidates(outputPaths.topCandidates);
+  if (localCandidates) {
+    return { candidates: localCandidates, source: "local-output" };
+  }
+
+  const bundledCandidates = readCandidates(outputPaths.bundledTopCandidates);
+  if (bundledCandidates) {
+    return { candidates: bundledCandidates, source: "bundled-generated" };
+  }
+
+  return { candidates: demoCandidates, source: "demo" };
 }
 
 export function getCandidateById(id: string): { candidate?: Candidate; isDemo: boolean } {
-  const { candidates, isDemo } = getCandidates();
-  return { candidate: candidates.find((candidate) => candidate.candidate_id === id), isDemo };
+  const { candidates, source } = getCandidates();
+  return { candidate: candidates.find((candidate) => candidate.candidate_id === id), isDemo: source === "demo" };
 }
 
 export function getShortlistStatus(): ShortlistStatus {
-  const submissionExists = fs.existsSync(outputPaths.submission);
-  const jsonExists = fs.existsSync(outputPaths.topCandidates);
+  const localSubmissionExists = fs.existsSync(outputPaths.submission);
+  const localJsonExists = fs.existsSync(outputPaths.topCandidates);
+  const bundledSubmissionExists = fs.existsSync(outputPaths.bundledSubmission);
+  const bundledJsonExists = fs.existsSync(outputPaths.bundledTopCandidates);
+  const localOutputExists = localSubmissionExists && localJsonExists;
+  const bundledOutputExists = bundledSubmissionExists && bundledJsonExists;
+  const source: CandidateSource = localOutputExists ? "local-output" : bundledOutputExists ? "bundled-generated" : "demo";
+  const submissionPath = source === "bundled-generated" ? "frontend/public/generated/submission.csv" : "outputs/submission.csv";
+  const jsonPath = source === "bundled-generated" ? "frontend/public/generated/top_candidates.json" : "outputs/top_candidates.json";
+  const selectedSubmissionPath = source === "bundled-generated" ? outputPaths.bundledSubmission : outputPaths.submission;
+  const selectedJsonPath = source === "bundled-generated" ? outputPaths.bundledTopCandidates : outputPaths.topCandidates;
+  const submissionExists = source === "local-output" ? localSubmissionExists : bundledSubmissionExists;
+  const jsonExists = source === "local-output" ? localJsonExists : bundledJsonExists;
   let candidateCount = 0;
 
   if (jsonExists) {
     try {
-      const parsed = JSON.parse(fs.readFileSync(outputPaths.topCandidates, "utf-8"));
+      const parsed = JSON.parse(fs.readFileSync(selectedJsonPath, "utf-8"));
       candidateCount = Array.isArray(parsed) ? parsed.length : 0;
     } catch {
       candidateCount = 0;
@@ -180,24 +247,31 @@ export function getShortlistStatus(): ShortlistStatus {
   }
 
   return {
+    localOutputExists,
+    bundledOutputExists,
     submissionExists,
     jsonExists,
     ready: submissionExists && jsonExists && candidateCount > 0,
     candidateCount,
-    submissionModifiedAt: modifiedAt(outputPaths.submission),
-    jsonModifiedAt: modifiedAt(outputPaths.topCandidates),
-    submissionPath: "outputs/submission.csv",
-    jsonPath: "outputs/top_candidates.json"
+    submissionModifiedAt: modifiedAt(selectedSubmissionPath),
+    jsonModifiedAt: modifiedAt(selectedJsonPath),
+    submissionPath,
+    jsonPath,
+    source
   };
 }
 
 export function getCandidatesResponse(): CandidatesResponse {
-  const { candidates, isDemo } = getCandidates();
+  const { candidates, source } = getCandidates();
   return {
-    demo: isDemo,
-    message: isDemo
-      ? "Demo data shown. Run backend ranking to load real results."
-      : "Real ranked shortlist loaded from outputs/top_candidates.json.",
+    demo: source === "demo",
+    source,
+    message:
+      source === "local-output"
+        ? "Real ranked shortlist loaded from local backend outputs."
+        : source === "bundled-generated"
+          ? "Generated shortlist loaded from bundled Vercel output files."
+          : "Demo data shown. Run backend locally to generate real ranked results.",
     candidates
   };
 }

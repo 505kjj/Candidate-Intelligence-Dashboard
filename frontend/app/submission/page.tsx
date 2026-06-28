@@ -7,8 +7,8 @@ export default function SubmissionPage() {
     <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-8">
         <p className="text-sm font-medium uppercase tracking-[0.24em] text-cyan">Submission</p>
-          <h1 className="mt-3 text-4xl font-semibold text-white sm:text-5xl">Submission Ready</h1>
-        </div>
+        <h1 className="mt-3 text-4xl font-semibold text-white sm:text-5xl">Submission Ready</h1>
+      </div>
       <div className="space-y-6">
         <SubmissionClient />
         <Command

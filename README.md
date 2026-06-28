@@ -110,6 +110,61 @@ The frontend includes local server API routes that connect the UI to the Python 
 
 Because `/api/run-ranking` starts a local Python process, this integration is intended for local demo/server deployments. It will not work on static-only hosting unless the Python backend is hosted separately.
 
+## Vercel Deployment
+
+Vercel is used for the frontend demo only. The full 100K-candidate ranking should still be run locally with the Python backend command.
+
+Import the GitHub repository into Vercel and use these settings:
+
+- Root Directory: `frontend`
+- Framework Preset: `Next.js`
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output Directory: `.next`
+
+On Vercel, `/api/run-ranking` does not start Python. It returns:
+
+```text
+Run Discovery is available locally only. For Vercel, use bundled generated outputs in frontend/public/generated.
+```
+
+For a Vercel demo with real ranked results, generate outputs locally and copy them into `frontend/public/generated/` before pushing:
+
+```bash
+python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json
+python validate_submission.py ./outputs/submission.csv
+node scripts/copy-outputs-to-frontend.js
+```
+
+The Vercel API routes read outputs in this order:
+
+1. Local root outputs: `outputs/submission.csv` and `outputs/top_candidates.json`.
+2. Bundled frontend outputs: `frontend/public/generated/submission.csv` and `frontend/public/generated/top_candidates.json`.
+3. Demo fallback data.
+
+If bundled generated data is used, the dashboard shows:
+
+```text
+Generated shortlist loaded from bundled Vercel output files.
+```
+
+If no generated output is available, the dashboard shows polished demo candidates with the banner:
+
+```text
+Demo data shown. Run backend locally to generate real ranked results.
+```
+
+Typical Vercel workflow:
+
+```bash
+python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json
+python validate_submission.py ./outputs/submission.csv
+node scripts/copy-outputs-to-frontend.js
+git add .
+git commit -m "Add generated outputs for Vercel demo"
+git push
+```
+
 ## Frontend Pages
 
 - `/`: premium landing page for Candidate Intelligence Dashboard.
@@ -117,7 +172,7 @@ Because `/api/run-ranking` starts a local Python process, this integration is in
 - `/dashboard`: searchable/filterable ranked candidate shortlist.
 - `/candidate/[id]`: candidate detail with reasoning, strengths, concerns, behavioral signals, and score breakdown.
 - `/methodology`: scoring approach, trap detection, reproducibility.
-- `/submission`: commands, output files, and GitHub checklist.
+- `/submission`: output status, download actions, backend command, and validation command.
 
 ## CPU-Only / No-Network Statement
 
@@ -150,6 +205,8 @@ python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/subm
 7. Use the dashboard or submission page download buttons for `submission.csv` and `top_candidates.json`.
 
 If `data/candidates.jsonl` is not present, `/api/run-ranking` returns a clear error asking you to place the organiser dataset at `data/candidates.jsonl`. The dashboard still works with demo data through `/api/candidates`.
+
+For Vercel, do not rely on `/api/run-ranking`; run the backend locally and use the hosted frontend as a demo dashboard.
 
 ## GitHub Submission Checklist
 

@@ -2,8 +2,11 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowDownToLine, ArrowUpDown, Eye, Loader2, PlayCircle, Search, SlidersHorizontal } from "lucide-react";
 import type { Candidate, CandidatesResponse } from "@/lib/candidates";
+import { CandidateHead } from "@/components/CandidateHead";
+import { DiscoveryOverlay } from "@/components/DiscoveryOverlay";
 
 type SortMode = "score-desc" | "rank-asc";
 
@@ -13,6 +16,7 @@ export function DashboardClient() {
   const [message, setMessage] = useState("Loading candidates...");
   const [loading, setLoading] = useState(true);
   const [running, setRunning] = useState(false);
+  const [runDetails, setRunDetails] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const [risk, setRisk] = useState("All");
   const [scoreMin, setScoreMin] = useState(0);
@@ -34,11 +38,16 @@ export function DashboardClient() {
 
   async function runDiscovery() {
     setRunning(true);
+    setRunDetails(null);
     setMessage("Ranking candidates and generating outputs...");
     try {
       const response = await fetch("/api/run-ranking", { method: "POST" });
       const payload = await response.json();
       if (!response.ok || !payload.success) {
+        const detail = [payload.error, payload.stdout && `stdout:\n${payload.stdout}`, payload.stderr && `stderr:\n${payload.stderr}`]
+          .filter(Boolean)
+          .join("\n\n");
+        setRunDetails(detail || null);
         throw new Error(payload.message || payload.error || "Ranking failed.");
       }
       setMessage("Shortlist generated successfully.");
@@ -95,19 +104,27 @@ export function DashboardClient() {
         </button>
         <a
           href="/api/download/submission"
-          className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-3 font-semibold text-white transition hover:bg-white/10"
+          className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg border border-white/15 bg-white/5 px-4 py-3 font-semibold text-white"
         >
-          <ArrowDownToLine size={18} />
-          Download submission.csv
+          <span className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-300 group-hover:translate-x-0" />
+          <ArrowDownToLine size={18} className="relative z-10" />
+          <span className="relative z-10">Download submission.csv</span>
         </a>
         <a
           href="/api/download/top-candidates"
-          className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-3 font-semibold text-white transition hover:bg-white/10"
+          className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-lg border border-white/15 bg-white/5 px-4 py-3 font-semibold text-white"
         >
-          <ArrowDownToLine size={18} />
-          Download top_candidates.json
+          <span className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-300 group-hover:translate-x-0" />
+          <ArrowDownToLine size={18} className="relative z-10" />
+          <span className="relative z-10">Download top_candidates.json</span>
         </a>
       </div>
+      {runDetails && (
+        <pre className="mb-6 max-h-72 overflow-auto whitespace-pre-wrap rounded-lg border border-rose-400/20 bg-rose-950/25 p-4 text-xs leading-5 text-rose-100">
+          {runDetails}
+        </pre>
+      )}
+      <DiscoveryOverlay active={running} />
       <div className="glass mb-6 rounded-lg p-4">
         <div className="grid gap-3 xl:grid-cols-[1.4fr_0.8fr_0.8fr_1.1fr_1.1fr_auto]">
           <label className="relative">
@@ -199,9 +216,19 @@ export function DashboardClient() {
           <span>Profile</span>
         </div>
         <div className="divide-y divide-white/10">
-          {filtered.map((candidate) => (
-            <article key={candidate.candidate_id} className="grid gap-4 px-5 py-5 transition hover:bg-white/[0.035] lg:grid-cols-[70px_1fr_90px_120px_120px_120px] lg:items-center">
-              <div className="text-2xl font-semibold text-cyan">#{candidate.rank}</div>
+          {filtered.map((candidate, index) => (
+            <motion.article
+              key={candidate.candidate_id}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: Math.min(index * 0.04, 0.4) }}
+              whileHover={{ y: -3 }}
+              className="grid gap-4 px-5 py-5 transition-colors hover:bg-white/[0.035] lg:grid-cols-[70px_1fr_90px_120px_120px_120px] lg:items-center"
+            >
+              <div className="flex items-center gap-2 text-2xl font-semibold text-cyan">
+                <CandidateHead size={28} animated={false} variant="compact" />
+                #{candidate.rank}
+              </div>
               <div>
                 <div className="flex flex-wrap items-center gap-3">
                   <h3 className="font-semibold text-white">{candidate.candidate_id}</h3>
@@ -210,26 +237,41 @@ export function DashboardClient() {
                 <p className="mt-2 line-clamp-2 text-sm leading-6 text-slate-400">{candidate.reasoning}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {candidate.top_skills.slice(0, 5).map((skill) => (
-                    <span key={skill} className="rounded-md border border-cyan/20 bg-cyan/10 px-2 py-1 text-xs text-cyan">
+                    <span
+                      key={skill}
+                      className="rounded-md border border-cyan/20 bg-cyan/10 px-2 py-1 text-xs text-cyan transition hover:border-cyan/50 hover:bg-cyan/20"
+                    >
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="text-xl font-semibold text-white">{candidate.score.toFixed(2)}</div>
+              <div>
+                <div className="text-xl font-semibold text-white">{candidate.score.toFixed(2)}</div>
+                <div className="mt-2 h-1 w-16 rounded-full bg-white/10">
+                  <motion.div
+                    className="h-1 rounded-full bg-white/70"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${candidate.score}%` }}
+                    transition={{ duration: 0.8, delay: Math.min(index * 0.04, 0.4), ease: "easeOut" }}
+                  />
+                </div>
+              </div>
               <div className="text-sm text-slate-300">{candidate.experience_years.toFixed(1)} yrs</div>
               <RiskBadge risk={candidate.risk_level} />
               <Link
                 href={`/candidate/${candidate.candidate_id}`}
-                className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white transition hover:bg-white/10"
+                className="group relative inline-flex w-fit items-center gap-2 overflow-hidden rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white"
               >
-                <Eye size={16} />
-                View Profile
+                <span className="absolute inset-0 -translate-x-full bg-white/10 transition-transform duration-300 group-hover:translate-x-0" />
+                <Eye size={16} className="relative z-10" />
+                <span className="relative z-10">View Profile</span>
               </Link>
-            </article>
+            </motion.article>
           ))}
           {!filtered.length && (
-            <div className="px-5 py-10 text-center text-slate-400">
+            <div className="flex flex-col items-center gap-3 px-5 py-12 text-center text-slate-400">
+              <CandidateHead size={72} variant="ghost" />
               No candidates match the current filters.
             </div>
           )}
