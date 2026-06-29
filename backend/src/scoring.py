@@ -6,11 +6,15 @@ from typing import Any
 from .features import (
     ADVANCED_AI_SKILLS,
     CAREER_EVIDENCE_KEYWORDS,
+    COMMON_TIER_FAR_DEDUCTION,
     CORE_SKILL_KEYWORDS,
     INDIA_HUB_TERMS,
     LOCATION_TERMS,
     NON_TECH_TITLE_TERMS,
     PRODUCT_INDUSTRY_TERMS,
+    RARE_ELITE_BONUS_CAP,
+    RARE_ELITE_CAREER_CONCEPTS,
+    RARE_ELITE_PER_CONCEPT,
     SERVICE_COMPANIES,
     TECH_TITLE_TERMS,
     WEIGHTS,
@@ -42,6 +46,29 @@ def _skill_lookup(candidate: CandidateRecord) -> dict[str, dict[str, Any]]:
     return {lower_text(skill.get("name")): skill for skill in candidate.skills if skill.get("name")}
 
 
+def rare_elite_concepts(candidate: CandidateRecord) -> list[str]:
+    """Distinct rare, directly-JD-relevant career concepts present in the work
+    history (recruiter-facing ranking, candidate-JD matching, learning-to-rank,
+    behavioral-signal ranking, end-to-end ranking pipeline)."""
+    career_low = lower_text(candidate.career_text)
+    found: list[str] = []
+    for concept, phrases in RARE_ELITE_CAREER_CONCEPTS.items():
+        if any(phrase in career_low for phrase in phrases):
+            found.append(concept)
+    return found
+
+
+def career_evidence_tier(candidate: CandidateRecord) -> str:
+    """'elite'  -> at least one rare, direct-domain concept,
+    'common' -> has career evidence but only generic templates,
+    'thin'   -> no career evidence at all."""
+    if rare_elite_concepts(candidate):
+        return "elite"
+    if count_keyword_hits(candidate.career_text, CAREER_EVIDENCE_KEYWORDS):
+        return "common"
+    return "thin"
+
+
 def score_career_evidence(candidate: CandidateRecord) -> ComponentScore:
     career_low = lower_text(candidate.career_text)
     profile_low = lower_text(candidate.profile_text)
@@ -53,6 +80,14 @@ def score_career_evidence(candidate: CandidateRecord) -> ComponentScore:
         ["ranking system", "retrieval", "semantic search", "hybrid search", "vector search", "recommendation engine", "ndcg", "mrr", "map", "a/b test", "production ml", "model serving"],
     )
     score += min(25.0, len(set(h.lower() for h in high_value)) * 5.0)
+
+    # Rare, direct-domain evidence is the scarcest, strongest signal in this pool, so
+    # it earns a modest bonus and is surfaced first in the evidence list (which also
+    # sharpens the generated reasoning). Common-template evidence gets nothing here.
+    elite_concepts = rare_elite_concepts(candidate)
+    if elite_concepts:
+        score += min(RARE_ELITE_BONUS_CAP, len(elite_concepts) * RARE_ELITE_PER_CONCEPT)
+        hits = elite_concepts + hits
 
     if any(token_hit(candidate.title, term) for term in TECH_TITLE_TERMS):
         score += 6
@@ -507,7 +542,20 @@ def score_candidate(candidate: CandidateRecord, semantic_score: float) -> Candid
         candidate, components["career_evidence"], components["core_skill_fit"]
     )
     feasibility_penalty, feasibility_concerns = compute_feasibility_penalty(candidate, loc, consistency)
-    penalty = min(60.0, trap_penalty + feasibility_penalty)
+
+    # Task 2: nudge down common-template-only candidates who are unwilling to relocate
+    # and far from the Pune/NCR hub. Gated to the 'common' tier so elite-tier evidence
+    # (e.g. recruiter-facing ranking, candidate-JD matching) is never demoted for
+    # location.
+    tier = career_evidence_tier(candidate)
+    common_far_penalty = 0.0
+    if tier == "common" and relocation_state(candidate) == "unwilling" and loc["in_india"] and not loc["in_hub"]:
+        common_far_penalty = COMMON_TIER_FAR_DEDUCTION
+        feasibility_concerns = feasibility_concerns + [
+            ("medium", "common-template career evidence with no relocation toward the Pune/NCR hub")
+        ]
+
+    penalty = min(60.0, trap_penalty + feasibility_penalty + common_far_penalty)
 
     final_score = sum(components[name].score * weight for name, weight in WEIGHTS.items()) - penalty
     final_score = clamp(final_score)
@@ -567,6 +615,9 @@ def score_candidate(candidate: CandidateRecord, semantic_score: float) -> Candid
         "medium_concerns": medium_concerns,
         "trap_penalty": round(trap_penalty, 2),
         "feasibility_penalty": round(feasibility_penalty, 2),
+        "career_tier": tier,
+        "rare_elite_concepts": rare_elite_concepts(candidate),
+        "common_far_penalty": round(common_far_penalty, 2),
         "primary_concern": (hard_concerns + medium_concerns + trap_reasons + ["none"])[0],
     }
 

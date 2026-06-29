@@ -91,3 +91,26 @@ WEIGHTS = {
     "behavioral_signal_fit": 0.10,
     "logistics_fit": 0.07,
 }
+
+# --- Rare, direct-domain career evidence (Task 2) -------------------------------
+# The pool's career descriptions are templated (~44 unique paragraphs). A few
+# paragraphs are the genuinely scarce, directly-JD-relevant signal — recruiter-facing
+# ranking/retrieval, candidate-JD matching, learning-to-rank, end-to-end ranking with
+# behavioral-signal integration (~9-12 occurrences each) — versus the common generic
+# templates (semantic search over a ~500K-doc knowledge base, content recommendation
+# for 10M+ users). These phrases earn a modest bonus so rarer elite evidence edges out
+# common-template evidence. Phrases are grouped by concept to avoid double-counting
+# near-variants. Magnitudes are the tuning knobs (easy to adjust or revert).
+RARE_ELITE_CAREER_CONCEPTS = {
+    "recruiter-facing ranking/retrieval": ["recruiter-facing"],
+    "candidate-JD matching": ["candidate-jd matching", "candidate jd matching", "candidate-job matching"],
+    "learning-to-rank": ["learning to rank", "learning-to-rank"],
+    "behavioral-signal ranking": ["behavioral-signal integration", "behavioral signal integration"],
+    "end-to-end ranking pipeline": ["end-to-end ranking"],
+}
+RARE_ELITE_PER_CONCEPT = 4.0     # career-evidence points per distinct elite concept
+RARE_ELITE_BONUS_CAP = 12.0      # cap on the total elite bonus (career-evidence points)
+# Final-scale deduction for common-template-only evidence AND unwilling to relocate AND
+# far from the Pune/NCR hub. Deliberately gated so elite-tier candidates are never
+# demoted for location.
+COMMON_TIER_FAR_DEDUCTION = 4.0
