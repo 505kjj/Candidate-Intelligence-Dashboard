@@ -93,19 +93,31 @@ def _availability_phrase(candidate: CandidateRecord) -> str:
     return ", ".join(bits[:3])
 
 
+def _cap_first(text: str) -> str:
+    return text[:1].upper() + text[1:] if text else text
+
+
 def build_reasoning(candidate: CandidateRecord, score: CandidateScore, rank: int) -> str:
     meta = score.meta
     career_ev = score.components["career_evidence"].evidence
     skills = top_skills(candidate, 4)
     companies = _real_companies(candidate, 3)
     years = float(candidate.experience_years or 0)
+    years_s = f"{years:.1f}"
     title = candidate.title or "AI engineer"
     loc = candidate.location or meta.get("country") or "India"
-    seed = sum(ord(c) for c in candidate.candidate_id)
+
+    # Independent hashes so the structure, connective, and concern slots vary
+    # independently instead of cycling in lock-step (the main source of the
+    # "templated" feel). All deterministic in candidate_id -> reproducible.
+    cid = candidate.candidate_id
+    seed_form = sum(ord(c) for c in cid)
+    seed_skill = sum((i + 1) * ord(c) for i, c in enumerate(cid))
+    seed_tail = sum(ord(c) * 7 + i for i, c in enumerate(cid))
 
     # --- evidence clause (real career keywords + real companies, no invention) ---
     ev_phrase = _join_human(career_ev, 3)
-    co_phrase = _join_human(companies, 3)
+    co_phrase = _join_human(companies, 2)
     if ev_phrase and co_phrase:
         evid = f"direct {ev_phrase} work across {co_phrase}"
     elif ev_phrase:
@@ -117,13 +129,16 @@ def build_reasoning(candidate: CandidateRecord, score: CandidateScore, rank: int
     else:
         evid = "an applied engineering background"
 
-    openers = [
-        f"{years:.1f}-year {title} in {loc} with {evid}.",
-        f"{title} out of {loc} ({years:.1f}y), bringing {evid}.",
-        f"{years:.1f} years as a {title} in {loc}, with {evid}.",
-        f"{loc}-based {title} ({years:.1f}y) showing {evid}.",
+    # --- alternative sentence structures (vary order + connectives) ---
+    forms = [
+        f"{years_s}-year {title} in {loc} with {evid}.",
+        f"{title} out of {loc} ({years_s}y), bringing {evid}.",
+        f"{years_s} years as a {title} in {loc}, showing {evid}.",
+        f"{loc}-based {title} ({years_s}y) with {evid}.",
+        f"{_cap_first(evid)} anchors this {years_s}y {title} in {loc}.",
+        f"From {loc}, a {years_s}y {title} with {evid}.",
     ]
-    sentence = openers[seed % len(openers)]
+    sentence = forms[seed_form % len(forms)]
 
     # --- skill clause (only when there is real skill signal) ---
     if skills and score.components["core_skill_fit"].evidence:
@@ -133,10 +148,12 @@ def build_reasoning(candidate: CandidateRecord, score: CandidateScore, rank: int
             f" Core tooling like {skill_phrase} fits the JD's search and ML needs.",
             f" {skill_phrase} back the embeddings and vector-search requirements.",
             f" Stack spans {skill_phrase}.",
+            f" Hands-on with {skill_phrase}.",
         ]
-        sentence += skill_variants[seed % len(skill_variants)]
+        sentence += skill_variants[seed_skill % len(skill_variants)]
 
     # --- concern clause (correct wording) or clean-availability affirmation ---
+    # Lower ranks read more measured; top ranks lead with the clean signal.
     notable = meta.get("hard_concerns", []) + meta.get("medium_concerns", [])
     if notable:
         concern_text = notable[0] if len(notable) == 1 else f"{notable[0]}, and {notable[1]}"
@@ -145,14 +162,21 @@ def build_reasoning(candidate: CandidateRecord, score: CandidateScore, rank: int
             f" Watch-out: {concern_text}.",
             f" Tradeoff to weigh: {concern_text}.",
             f" Flagged for {concern_text}.",
+            f" Caveat to weigh: {concern_text}.",
         ]
-        sentence += concern_variants[seed % len(concern_variants)]
+        sentence += concern_variants[seed_tail % len(concern_variants)]
         if score.risk_level == "High":
             sentence += " Retained on JD fit, but ranked with the penalty applied."
     else:
         avail = _availability_phrase(candidate)
         if avail:
-            sentence += f" Clean signals: {avail}."
+            clean_variants = [
+                f" Clean signals: {avail}.",
+                f" Availability checks out: {avail}.",
+                f" On logistics: {avail}.",
+                f" No flags — {avail}.",
+            ]
+            sentence += clean_variants[seed_tail % len(clean_variants)]
 
     return sentence[:520]
 
