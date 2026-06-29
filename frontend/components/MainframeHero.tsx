@@ -5,11 +5,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Loader2, PlayCircle, X } from "lucide-react";
-import { HeroFrameScrub } from "@/components/HeroFrameScrub";
+import { HeroVideo } from "@/components/HeroVideo";
 import { MainframeNav } from "@/components/MainframeNav";
 import { CursorGlow } from "@/components/CursorGlow";
 import { DiscoveryOverlay } from "@/components/DiscoveryOverlay";
-import { useTypewriter } from "@/components/useTypewriter";
 
 const TYPEWRITER_TEXT = "Glad you stopped in. Good talent tends to find us. Now, who are we discovering?";
 
@@ -26,8 +25,6 @@ export function MainframeHero() {
   const [error, setError] = useState<string | null>(null);
   const [runDetails, setRunDetails] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
-
-  const { displayed, done } = useTypewriter(TYPEWRITER_TEXT, { speed: 38, startDelay: 600 });
 
   async function handleViewShortlist() {
     setChecking(true);
@@ -81,7 +78,7 @@ export function MainframeHero() {
 
   return (
     <section className="relative h-screen min-h-screen w-full overflow-hidden bg-black">
-      <HeroFrameScrub />
+      <HeroVideo />
 
       {/* Legibility scrim: a cheap static gradient (no backdrop-filter / no per-frame
           blur) darkening the bottom where the hero copy sits. */}
@@ -98,18 +95,19 @@ export function MainframeHero() {
 
       <div className="absolute inset-0 z-10 flex flex-col justify-end px-5 pb-12 sm:px-8 md:justify-center md:px-10 md:pb-0">
         <div className="relative z-10 max-w-xl">
-          <p
+          <motion.p
             className="mb-5 text-white sm:mb-6"
             style={{
               fontSize: "clamp(18px, 4vw, 26px)",
               lineHeight: 1.35,
-              fontWeight: 400,
-              minHeight: 54
+              fontWeight: 400
             }}
+            initial={{ opacity: 0, y: 14, filter: "blur(8px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.25 }}
           >
-            {displayed}
-            {!done && <span className="typewriter-caret">|</span>}
-          </p>
+            {TYPEWRITER_TEXT}
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
