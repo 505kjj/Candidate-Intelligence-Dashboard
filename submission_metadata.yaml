@@ -10,9 +10,14 @@ team_members:
     email: "primary@example.com"
     role: "Builder"
 
-github_repo: "https://github.com/YOUR_USERNAME/india-runs-candidate-discovery"
-sandbox_link: "https://YOUR_SANDBOX_LINK"
+github_repo: "https://github.com/505kjj/Candidate-Intelligence-Dashboard"
+# Runnable sandbox (Section 10.5): runs the ranker end-to-end on a <=100-candidate
+# sample, CPU-only, no network/LLM. Colab notebook (zero setup) is the primary link;
+# a `docker build`/`docker run` recipe is in the README "Sandbox / Reproduction" section.
+sandbox_link: "https://colab.research.google.com/github/505kjj/Candidate-Intelligence-Dashboard/blob/master/sandbox/run_sandbox.ipynb"
+demo_dashboard_link: "https://frontend-pink-nine-73.vercel.app/"
 reproduce_command: "python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json"
+sandbox_command: "docker build -t candidate-ranker . && docker run --rm candidate-ranker"
 
 compute:
   platform: "Local CPU machine"

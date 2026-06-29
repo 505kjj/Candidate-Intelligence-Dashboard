@@ -22,6 +22,7 @@ frontend/.next-dev*.log
 data/candidates.jsonl
 data/*.jsonl
 !data/sample_candidates.jsonl
+!data/sandbox_sample.jsonl
 *.zip
 data/*.zip
 data/*.json

@@ -1,0 +1,31 @@
+# Keep the build context small and never bake the large private pool into the image.
+data/candidates.jsonl
+data/*.zip
+*.zip
+
+# Node / Next.js (the sandbox image is Python-only)
+node_modules
+frontend/node_modules
+frontend/.next
+frontend/out
+
+# Python caches / venvs
+__pycache__
+**/__pycache__
+*.pyc
+.venv
+venv
+.pytest_cache
+
+# Generated outputs (regenerated inside the container)
+outputs/*.csv
+outputs/*.json
+
+# VCS / editor / OS
+.git
+.gitignore
+.idea
+.vscode
+.vercel
+.DS_Store
+Thumbs.db

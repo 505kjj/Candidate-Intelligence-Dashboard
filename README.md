@@ -2,6 +2,34 @@
 
 Candidate Intelligence Dashboard is a complete proof-of-concept for the India Runs Data & AI Challenge: Intelligent Candidate Discovery. It ranks the top 100 candidates for a Senior AI Engineer / Founding AI Engineer role using a reproducible, CPU-only, no-network hybrid ranking engine plus a premium Next.js dashboard.
 
+## Sandbox / Reproduction (Section 10.5)
+
+This repo ships a **self-contained sandbox that actually runs the ranker end-to-end** on a bundled sample of **≤100 candidates** (`data/sandbox_sample.jsonl`) — CPU-only, no network, no LLM — and emits a validated ranked CSV. Two equivalent ways to run it:
+
+### Option A — Google Colab (zero setup)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/505kjj/Candidate-Intelligence-Dashboard/blob/master/sandbox/run_sandbox.ipynb)
+
+Open [`sandbox/run_sandbox.ipynb`](sandbox/run_sandbox.ipynb) and run all cells. It clones this repo, installs `requirements.txt`, runs `backend/rank.py` on the bundled sample, validates the output, and shows the ranked CSV as a dataframe.
+
+### Option B — Docker (`docker run`)
+
+```bash
+docker build -t candidate-ranker .
+docker run --rm candidate-ranker
+```
+
+On `docker run` the container ranks `data/sandbox_sample.jsonl`, runs `validate_submission.py` (prints `Submission is valid.`), and prints the resulting `outputs/submission.csv`. To rank your own full pool instead, mount it over the sample:
+
+```bash
+docker run --rm -v "$PWD/data/candidates.jsonl:/app/data/candidates.jsonl" \
+  candidate-ranker python backend/rank.py \
+  --candidates ./data/candidates.jsonl --out ./outputs/submission.csv \
+  --json ./outputs/top_candidates.json
+```
+
+> The bundled sample is capped at ≤100 candidates and runs in seconds. The **Vercel dashboard is a display-only demo** — it shows precomputed results and does **not** run the Python ranker. Use this sandbox (Colab or Docker) for actual reproduction.
+
 ## Problem Statement
 
 The task is to discover the best-fit candidates from `candidates.jsonl` for a role that needs hands-on production AI engineering: search, ranking, retrieval, embeddings, vector databases, evaluation metrics, Python, ML infrastructure, product judgment, and startup/founding-team mindset.
