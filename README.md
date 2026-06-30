@@ -30,6 +30,30 @@ docker run --rm -v "$PWD/data/candidates.jsonl:/app/data/candidates.jsonl" \
 
 > The bundled sample is capped at ≤100 candidates and runs in seconds. The **Vercel dashboard is a display-only demo** — it shows precomputed results and does **not** run the Python ranker. Use this sandbox (Colab or Docker) for actual reproduction.
 
+## Stage 3 Reproducibility & No-Hosted-LLM Guarantee
+
+This submission is **fully reproducible offline and uses no hosted LLM/API at any point in scoring or ranking.**
+
+- **No candidate data leaves the machine.** Nothing is sent to OpenAI, Anthropic/Claude, Google Gemini, Cohere, Groq, Together, HuggingFace hosted inference, or any other external model/API.
+- **No hosted LLM is used for scoring or ranking** — not for semantic matching, not for career-evidence scoring, not for trap detection, not for the written reasoning. There are no API keys, tokens, or network calls anywhere in the ranking path.
+- **Semantic scoring is local** TF-IDF + cosine similarity via `scikit-learn` (`TfidfVectorizer`) over candidate text vs the interpreted JD.
+- **Career-evidence scoring is local, rule-based** heuristics over the candidate's actual `career_history` descriptions (genuine work-history evidence, not skills lists).
+- **Trap / data-quality detection is local, rule-based** (keyword-stuffing, unsupported AI skills, non-technical titles with dense AI lists, and declared-vs-documented experience inconsistency).
+- **CPU-only, no network, no GPU.** Runs in well under 5 minutes on the full 100K pool (~2–4 min, < 16 GB RAM). Deterministic: the same input always produces an identical CSV.
+- **Vercel does not run the ranker.** The website is a read-only dashboard that displays the already-generated `submission.csv` / `top_candidates.json`. The ranking engine runs only via `backend/rank.py` (locally or in Docker).
+
+**Proof from the code:** the entire backend imports only the Python standard library plus `numpy` and `sklearn.feature_extraction.text.TfidfVectorizer`. `requirements.txt` is exactly `numpy`, `scipy`, `scikit-learn` — no LLM SDK, no HTTP client, no network library. (Names like `LLM`, `LangChain`, `PyTorch`, or `Capgemini` appear only as literal keyword **strings** the ranker matches against candidate text — they are never imported or called.)
+
+**Reproduce the exact submission:**
+
+```bash
+python -m pip install -r requirements.txt
+python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json
+python validate_submission.py ./outputs/submission.csv   # -> "Submission is valid."
+```
+
+Or run the bundled ≤100 sample with zero setup via the Colab badge above, or `docker run --rm candidate-ranker`.
+
 ## Problem Statement
 
 The task is to discover the best-fit candidates from `candidates.jsonl` for a role that needs hands-on production AI engineering: search, ranking, retrieval, embeddings, vector databases, evaluation metrics, Python, ML infrastructure, product judgment, and startup/founding-team mindset.
@@ -45,15 +69,21 @@ There are no relevance labels in the public dataset. Training a model would eith
 Final score:
 
 ```text
-0.28 * semantic_match
-+ 0.22 * career_evidence
-+ 0.16 * core_skill_fit
+0.25 * semantic_match
++ 0.25 * career_evidence
++ 0.15 * core_skill_fit
 + 0.10 * seniority_fit
 + 0.08 * product_company_fit
 + 0.10 * behavioral_signal_fit
-+ 0.06 * logistics_fit
-- penalties
++ 0.07 * logistics_fit
+- trap_and_data_quality_penalties
 ```
+
+These weights are the single source of truth in `backend/src/features.py` (`WEIGHTS`),
+shared by both the scorer and the JSON breakdown so they can never drift. The
+`trap_and_data_quality_penalties` term covers honeypot/keyword-stuffing traps and
+experience-inconsistency (declared vs documented years) deductions; all penalty
+magnitudes are named constants in `backend/src/features.py` for transparent tuning.
 
 Components:
 
