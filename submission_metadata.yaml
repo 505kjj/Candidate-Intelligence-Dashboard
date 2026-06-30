@@ -21,6 +21,29 @@ sandbox_link: "https://colab.research.google.com/github/505kjj/Candidate-Intelli
 demo_dashboard_link: "https://frontend-pink-nine-73.vercel.app/"
 reproduce_command: "python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json"
 sandbox_command: "docker build -t candidate-ranker . && docker run --rm candidate-ranker"
+validate_command: "python validate_submission.py ./outputs/submission.csv"
+
+generated_outputs:
+  - "submission.csv"                               # root copy for judging
+  - "outputs/submission.csv"
+  - "outputs/top_candidates.json"
+  - "frontend/public/generated/submission.csv"     # served by the Vercel dashboard
+  - "frontend/public/generated/top_candidates.json"
+
+vercel_is_demo_only: true
+vercel_note: |
+  The Vercel site is a display-only dashboard/demo. It serves precomputed generated
+  outputs and does NOT run the Python ranking engine. The ranker runs only via
+  backend/rank.py locally or in Docker.
+
+no_hosted_llm: true
+no_hosted_llm_declaration: |
+  No hosted LLM/API (OpenAI, Anthropic/Claude, Google Gemini, Cohere, Groq, Together,
+  HuggingFace Inference, or any other external model service) is used during scoring
+  or ranking. Semantic similarity is local scikit-learn TF-IDF; career-evidence,
+  logistics, behavioral, and trap detection are local deterministic heuristics. No
+  candidate data leaves the machine during ranking; the backend imports only the
+  Python standard library plus numpy and scikit-learn.
 
 compute:
   platform: "Local CPU machine"
@@ -57,3 +80,5 @@ declarations:
   no_collusion: true
   honeypot_check_done: true
   reproduction_tested: true
+  no_hosted_llm_used_in_scoring: true
+  ranking_is_cpu_only: true

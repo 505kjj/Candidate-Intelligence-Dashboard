@@ -51,8 +51,8 @@ export default function MethodologyPage() {
       <div className="mt-8 glass rounded-lg p-6">
         <h2 className="text-2xl font-semibold text-white">Final Score</h2>
         <p className="mt-3 max-w-4xl leading-8 text-slate-400">
-          0.28 semantic match + 0.22 career evidence + 0.16 core skill fit + 0.10 seniority fit +
-          0.08 product/company fit + 0.10 behavioral signal fit + 0.06 logistics fit minus trap penalties.
+          0.25 semantic match + 0.25 career evidence + 0.15 core skill fit + 0.10 seniority fit +
+          0.08 product/company fit + 0.10 behavioral signal fit + 0.07 logistics fit minus trap and data-quality penalties.
         </p>
       </div>
     </section>
