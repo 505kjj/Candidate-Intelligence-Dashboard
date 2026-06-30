@@ -1,4 +1,4 @@
-team_name: "orbitroom"
+﻿team_name: "orbitroom"
 
 primary_contact:
   name: "Khushi Jain"
@@ -52,25 +52,6 @@ scoring_formula: |
   + 0.10 behavioral signal fit
   + 0.07 logistics fit
   - trap/data-quality penalties
-
-compute:
-  platform: "Local CPU machine"
-  cpu_cores: 8
-  ram_gb: 16
-  python_version: "3.11"
-  os: "Windows 11 / Linux compatible"
-  uses_gpu_for_inference: false
-  has_network_during_ranking: false
-  pre_computation_required: false
-  pre_computation_time_minutes: 0
-
-ai_tools_used:
-  - "ChatGPT"
-  - "Claude"
-
-ai_usage_summary: |
-  Used AI assistance to scaffold and review code, documentation, and UI structure.
-  No hosted AI APIs are called during ranking and no candidate data is sent to an external model by the submitted ranker.
 
 declarations:
   read_submission_spec: true
