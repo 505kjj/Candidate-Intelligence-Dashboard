@@ -18,6 +18,7 @@ demo_dashboard_link: "https://frontend-pink-nine-73.vercel.app/"
 dashboard_page: "https://frontend-pink-nine-73.vercel.app/dashboard"
 
 no_hosted_llm: true
+
 no_hosted_llm_declaration: |
   No hosted LLM/API is used during scoring or ranking.
   No candidate data is sent to external model services.
@@ -36,10 +37,6 @@ scoring_formula: |
   - trap/data-quality penalties
 
 vercel_is_demo_only: true
-vercel_note: |
-  The Vercel site is a display-only dashboard/demo.
-  It serves precomputed generated outputs and does not run the Python ranking engine.
-  The ranker runs only via backend/rank.py locally or in Docker.
 
 declarations:
   read_submission_spec: true
