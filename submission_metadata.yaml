@@ -1,13 +1,16 @@
-team_name: "Candidate Intelligence Dashboard"
+team_name: "orbitroom"
 
 primary_contact:
-  name: "Full Name"
-  email: "primary@example.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "Khushi Jain"
+  email: "khushi.12760@stu.upes.ac.in"
+  phone: "+91-8586833271"
 
 team_members:
-  - name: "Full Name"
-    email: "primary@example.com"
+  - name: "Khushi Jain"
+    email: "khushi.12760@stu.upes.ac.in"
+    role: "Team Lead"
+  - name: "Pratham Bhat"
+    email: "Pratham.11948@stu.upes.ac.in"
     role: "Builder"
 
 github_repo: "https://github.com/505kjj/Candidate-Intelligence-Dashboard"
@@ -32,6 +35,7 @@ compute:
 
 ai_tools_used:
   - "ChatGPT"
+  - "Claude"
 
 ai_usage_summary: |
   Used AI assistance to scaffold and review code, documentation, and UI structure.
