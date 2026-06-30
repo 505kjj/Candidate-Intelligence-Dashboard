@@ -14,36 +14,44 @@ team_members:
     role: "Builder"
 
 github_repo: "https://github.com/505kjj/Candidate-Intelligence-Dashboard"
-# Runnable sandbox (Section 10.5): runs the ranker end-to-end on a <=100-candidate
-# sample, CPU-only, no network/LLM. Colab notebook (zero setup) is the primary link;
-# a `docker build`/`docker run` recipe is in the README "Sandbox / Reproduction" section.
-sandbox_link: "https://colab.research.google.com/github/505kjj/Candidate-Intelligence-Dashboard/blob/master/sandbox/run_sandbox.ipynb"
 demo_dashboard_link: "https://frontend-pink-nine-73.vercel.app/"
+dashboard_page: "https://frontend-pink-nine-73.vercel.app/dashboard"
+sandbox_link: "https://colab.research.google.com/github/505kjj/Candidate-Intelligence-Dashboard/blob/master/sandbox/run_sandbox.ipynb"
+
 reproduce_command: "python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json"
-sandbox_command: "docker build -t candidate-ranker . && docker run --rm candidate-ranker"
 validate_command: "python validate_submission.py ./outputs/submission.csv"
+sandbox_command: "docker build -t candidate-ranker . && docker run --rm candidate-ranker"
 
 generated_outputs:
-  - "submission.csv"                               # root copy for judging
+  - "submission.csv"
   - "outputs/submission.csv"
   - "outputs/top_candidates.json"
-  - "frontend/public/generated/submission.csv"     # served by the Vercel dashboard
+  - "frontend/public/generated/submission.csv"
   - "frontend/public/generated/top_candidates.json"
 
 vercel_is_demo_only: true
 vercel_note: |
-  The Vercel site is a display-only dashboard/demo. It serves precomputed generated
-  outputs and does NOT run the Python ranking engine. The ranker runs only via
-  backend/rank.py locally or in Docker.
+  The Vercel site is a display-only dashboard/demo.
+  It serves precomputed generated outputs and does not run the Python ranking engine.
+  The ranker runs only via backend/rank.py locally or in Docker.
 
 no_hosted_llm: true
 no_hosted_llm_declaration: |
-  No hosted LLM/API (OpenAI, Anthropic/Claude, Google Gemini, Cohere, Groq, Together,
-  HuggingFace Inference, or any other external model service) is used during scoring
-  or ranking. Semantic similarity is local scikit-learn TF-IDF; career-evidence,
-  logistics, behavioral, and trap detection are local deterministic heuristics. No
-  candidate data leaves the machine during ranking; the backend imports only the
-  Python standard library plus numpy and scikit-learn.
+  No hosted LLM/API is used during scoring or ranking.
+  No candidate data is sent to OpenAI, Anthropic/Claude, Google Gemini, Cohere, Groq, Together, HuggingFace Inference, or any external model service.
+  Semantic similarity is local scikit-learn TF-IDF.
+  Career-evidence, logistics, behavioral, and trap detection are local deterministic heuristics.
+
+scoring_formula: |
+  Final Score =
+  0.25 semantic match
+  + 0.25 career evidence
+  + 0.15 core skill fit
+  + 0.10 seniority fit
+  + 0.08 product/company fit
+  + 0.10 behavioral signal fit
+  + 0.07 logistics fit
+  - trap/data-quality penalties
 
 compute:
   platform: "Local CPU machine"
@@ -62,17 +70,7 @@ ai_tools_used:
 
 ai_usage_summary: |
   Used AI assistance to scaffold and review code, documentation, and UI structure.
-  No hosted AI APIs are called during ranking and no candidate data is sent to an
-  external model by the submitted ranker.
-
-methodology_summary: |
-  CPU-only explainable hybrid ranker for a Senior AI / Founding AI Engineer role.
-  It combines TF-IDF semantic similarity with explicit scoring for career
-  evidence, core skills, seniority, product-company fit, behavioral availability,
-  logistics, and trap detection. The system rewards career descriptions showing
-  production retrieval, ranking, embeddings, vector search, ML infrastructure,
-  evaluation metrics, and product engineering, while penalizing keyword-stuffed
-  or non-technical profiles where AI skills are unsupported by work history.
+  No hosted AI APIs are called during ranking and no candidate data is sent to an external model by the submitted ranker.
 
 declarations:
   read_submission_spec: true
