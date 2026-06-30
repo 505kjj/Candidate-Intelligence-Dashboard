@@ -3814,54 +3814,8 @@
     }
   },
   {
-    "candidate_id": "CAND_0039754",
-    "rank": 87,
-    "score": 70.55,
-    "reasoning": "From Indore, Madhya Pradesh, a 16.2y Senior Applied Scientist with direct recruiter-facing ranking/retrieval, learning-to-rank, and behavioral-signal ranking work across Meta and Apple. NLP, Deep Learning, Python, and Elasticsearch line up with the role's retrieval and ranking stack. Main concern: declares 16y but career history documents only ~8y, and 16.2y experience, well above the target band. Retained on JD fit, but ranked with the penalty applied.",
-    "title": "Senior Applied Scientist",
-    "location": "Indore, Madhya Pradesh",
-    "experience_years": 16.2,
-    "top_skills": [
-      "NLP",
-      "Deep Learning",
-      "Python",
-      "Elasticsearch",
-      "OpenSearch",
-      "Weaviate"
-    ],
-    "risk_level": "High",
-    "strengths": [
-      "recruiter-facing ranking/retrieval",
-      "learning-to-rank",
-      "product",
-      "internet"
-    ],
-    "concerns": [
-      "declares 16y but career history documents only ~8y",
-      "16.2y experience, well above the target band",
-      "Several AI skills are weakly supported by career text",
-      "Above target range and may be less hands-on"
-    ],
-    "score_breakdown": {
-      "semantic_match": 25.0,
-      "career_evidence": 25.0,
-      "core_skill_fit": 10.05,
-      "seniority_fit": 4.2,
-      "product_company_fit": 7.44,
-      "behavioral_signal_fit": 10.0,
-      "logistics_fit": 6.86,
-      "penalties": -18.0
-    },
-    "behavioral_signals": {
-      "open_to_work": true,
-      "last_active": "2026-05-14",
-      "response_rate": "81%",
-      "notice_period": "30 days"
-    }
-  },
-  {
     "candidate_id": "CAND_0022812",
-    "rank": 88,
+    "rank": 87,
     "score": 70.2,
     "reasoning": "Direct learning-to-rank, production ML, and recommendation work across Dream11 and Razorpay anchors this 4.5y Applied ML Engineer in Coimbatore, Tamil Nadu. Core tooling like NLP, Pinecone, LLMs, and Prompt Engineering fits the JD's search and ML needs. Caveat to weigh: not currently marked open to work.",
     "title": "Applied ML Engineer",
@@ -3907,7 +3861,7 @@
   },
   {
     "candidate_id": "CAND_0012837",
-    "rank": 89,
+    "rank": 88,
     "score": 70.18,
     "reasoning": "Direct ranking system, recommendation, and inference work across Sarvam AI and CRED anchors this 6.4y Junior ML Engineer in Chandigarh, Chandigarh. MLOps, Object Detection, Speech Recognition, and Weaviate line up with the role's retrieval and ranking stack. Clean signals: open to work, 81% recruiter response.",
     "title": "Junior ML Engineer",
@@ -3950,7 +3904,7 @@
   },
   {
     "candidate_id": "CAND_0004402",
-    "rank": 90,
+    "rank": 89,
     "score": 70.06,
     "reasoning": "From Delhi, Delhi, a 6.0y AI Research Engineer with direct ranking system, recommendation, and inference work across Yellow.ai and Zomato. PEFT, BentoML, TTS, and PyTorch back the embeddings and vector-search requirements. No flags — open to work, 83% recruiter response.",
     "title": "AI Research Engineer",
@@ -3993,7 +3947,7 @@
   },
   {
     "candidate_id": "CAND_0064904",
-    "rank": 91,
+    "rank": 90,
     "score": 69.67,
     "reasoning": "4.9-year AI Engineer in Hyderabad, Telangana with direct production ML, embedding, and recommendation work across LinkedIn and Freshworks. Hands-on with Embeddings, Python, Prompt Engineering, and TensorFlow. Main concern: 90-day notice period, and not willing to relocate toward the Pune/NCR zone.",
     "title": "AI Engineer",
@@ -4039,7 +3993,7 @@
   },
   {
     "candidate_id": "CAND_0012888",
-    "rank": 92,
+    "rank": 91,
     "score": 69.6,
     "reasoning": "Direct ranking system, recommendation, and inference work across Genpact AI and Niramai anchors this 6.4y Junior ML Engineer in Delhi, Delhi. scikit-learn, TTS, Image Classification, and Kubeflow back the embeddings and vector-search requirements. On logistics: open to work, 30-day notice.",
     "title": "Junior ML Engineer",
@@ -4082,7 +4036,7 @@
   },
   {
     "candidate_id": "CAND_0015967",
-    "rank": 93,
+    "rank": 92,
     "score": 69.34,
     "reasoning": "From Hyderabad, Telangana, a 5.4y Senior Software Engineer (ML) with direct model deployment, ranking system, and recommendation work across Razorpay and CRED. ASR, Object Detection, Deep Learning, and LLMs line up with the role's retrieval and ranking stack. Availability checks out: open to work, 30-day notice.",
     "title": "Senior Software Engineer (ML)",
@@ -4125,7 +4079,7 @@
   },
   {
     "candidate_id": "CAND_0052682",
-    "rank": 94,
+    "rank": 93,
     "score": 69.3,
     "reasoning": "6.6-year NLP Engineer in Vizag, Andhra Pradesh with direct embedding, recommendation, and RAG work across Aganitha and Salesforce. Python, QLoRA, Embeddings, and Semantic Search back the embeddings and vector-search requirements. Main concern: not willing to relocate toward the Pune/NCR zone, and common-template career evidence with no relocation toward the Pune/NCR hub.",
     "title": "NLP Engineer",
@@ -4169,7 +4123,7 @@
   },
   {
     "candidate_id": "CAND_0094056",
-    "rank": 95,
+    "rank": 94,
     "score": 69.18,
     "reasoning": "NLP Engineer out of Chennai, Tamil Nadu (5.9y), bringing direct production ML, retrieval, and semantic search work across Rephrase.ai and Adobe. Embeddings, LlamaIndex, Pinecone, and PEFT back the embeddings and vector-search requirements. Tradeoff to weigh: not currently marked open to work, and 120-day notice period. Retained on JD fit, but ranked with the penalty applied.",
     "title": "NLP Engineer",
@@ -4216,7 +4170,7 @@
   },
   {
     "candidate_id": "CAND_0011327",
-    "rank": 96,
+    "rank": 95,
     "score": 69.15,
     "reasoning": "Gurgaon, Haryana-based AI Research Engineer (6.3y) with direct model deployment, ranking system, and recommendation work across Krutrim and Razorpay. Forecasting, Weights & Biases, Speech Recognition, and Haystack line up with the role's retrieval and ranking stack. No flags — open to work, 79% recruiter response.",
     "title": "AI Research Engineer",
@@ -4259,7 +4213,7 @@
   },
   {
     "candidate_id": "CAND_0037980",
-    "rank": 97,
+    "rank": 96,
     "score": 69.15,
     "reasoning": "Direct data pipelines, A/B testing, and experiment work across Niramai and Verloop.io anchors this 9.0y Senior Applied Scientist in Kolkata, West Bengal. Text Encoders, LoRA, Document Processing, and Information Retrieval Systems back the embeddings and vector-search requirements. On logistics: open to work, 63% recruiter response, 0-day notice.",
     "title": "Senior Applied Scientist",
@@ -4300,7 +4254,7 @@
   },
   {
     "candidate_id": "CAND_0098952",
-    "rank": 98,
+    "rank": 97,
     "score": 68.94,
     "reasoning": "Direct ranking system, recommendation, and experiment work across CRED and Rephrase.ai anchors this 5.5y AI Research Engineer in Gurgaon, Haryana. Diffusion Models, NLP, Reinforcement Learning, and Recommendation Systems line up with the role's retrieval and ranking stack. Clean signals: open to work, 66% recruiter response.",
     "title": "AI Research Engineer",
@@ -4343,7 +4297,7 @@
   },
   {
     "candidate_id": "CAND_0044883",
-    "rank": 99,
+    "rank": 98,
     "score": 68.82,
     "reasoning": "Direct production ML, retrieval, and semantic search work across Mad Street Den and Adobe anchors this 6.3y AI Engineer in Berlin. Hands-on with TensorFlow, PyTorch, Prompt Engineering, and Fine-tuning LLMs. Flagged for not currently marked open to work, and 90-day notice period. Retained on JD fit, but ranked with the penalty applied.",
     "title": "AI Engineer",
@@ -4390,7 +4344,7 @@
   },
   {
     "candidate_id": "CAND_0024620",
-    "rank": 100,
+    "rank": 99,
     "score": 68.77,
     "reasoning": "New York-based AI Engineer (5.9y) with direct learning-to-rank, production ML, and recommendation work across PharmEasy and Glance. Core tooling like Python, Elasticsearch, QLoRA, and Information Retrieval fits the JD's search and ML needs. Tradeoff to weigh: based in USA but willing to relocate.",
     "title": "AI Engineer",
@@ -4429,6 +4383,49 @@
       "last_active": "2026-04-12",
       "response_rate": "41%",
       "notice_period": "45 days"
+    }
+  },
+  {
+    "candidate_id": "CAND_0065878",
+    "rank": 100,
+    "score": 68.7,
+    "reasoning": "From Trivandrum, Kerala, a 7.8y Senior Data Scientist with direct learning-to-rank, embedding, and recommendation work across Niramai and Uber. Stack spans scikit-learn, QLoRA, Fine-tuning LLMs, and TensorFlow. Tradeoff to weigh: not willing to relocate toward the Pune/NCR zone.",
+    "title": "Senior Data Scientist",
+    "location": "Trivandrum, Kerala",
+    "experience_years": 7.8,
+    "top_skills": [
+      "scikit-learn",
+      "QLoRA",
+      "Fine-tuning LLMs",
+      "TensorFlow",
+      "Recommendation Systems",
+      "Vector Search"
+    ],
+    "risk_level": "Medium",
+    "strengths": [
+      "7.8 years experience",
+      "product",
+      "e-commerce"
+    ],
+    "concerns": [
+      "not willing to relocate toward the Pune/NCR zone",
+      "Python is not explicit"
+    ],
+    "score_breakdown": {
+      "semantic_match": 22.54,
+      "career_evidence": 13.5,
+      "core_skill_fit": 8.4,
+      "seniority_fit": 10.0,
+      "product_company_fit": 6.16,
+      "behavioral_signal_fit": 8.28,
+      "logistics_fit": 5.32,
+      "penalties": -5.5
+    },
+    "behavioral_signals": {
+      "open_to_work": true,
+      "last_active": "2026-03-23",
+      "response_rate": "48%",
+      "notice_period": "15 days"
     }
   }
 ]

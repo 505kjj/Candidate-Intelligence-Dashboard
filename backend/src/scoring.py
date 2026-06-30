@@ -11,12 +11,16 @@ from .features import (
     INDIA_HUB_TERMS,
     LOCATION_TERMS,
     NON_TECH_TITLE_TERMS,
+    OVERCLAIM_MODERATE_PENALTY,
+    OVERCLAIM_STRONG_PENALTY,
     PRODUCT_INDUSTRY_TERMS,
     RARE_ELITE_BONUS_CAP,
     RARE_ELITE_CAREER_CONCEPTS,
     RARE_ELITE_PER_CONCEPT,
     SERVICE_COMPANIES,
+    SPARSE_HISTORY_PENALTY,
     TECH_TITLE_TERMS,
+    UNDERCLAIM_PENALTY,
     WEIGHTS,
 )
 from .loader import CandidateRecord
@@ -413,19 +417,19 @@ def experience_consistency(candidate: CandidateRecord) -> dict[str, Any]:
     note = ""
     if has_history and gap >= 5 and profile_years >= 1.6 * max(career_years, 0.1):
         severity = "overclaim_strong"
-        penalty = 14.0
+        penalty = OVERCLAIM_STRONG_PENALTY
         note = f"declares {profile_years:.0f}y but career history documents only ~{career_years:.0f}y"
     elif has_history and gap >= 3:
         severity = "overclaim_moderate"
-        penalty = 6.0
+        penalty = OVERCLAIM_MODERATE_PENALTY
         note = f"declared {profile_years:.0f}y runs ahead of the ~{career_years:.0f}y in career history"
     elif has_history and gap <= -2:
         severity = "underclaim"
-        penalty = 4.0
+        penalty = UNDERCLAIM_PENALTY
         note = f"career history (~{career_years:.0f}y) exceeds the declared {profile_years:.0f}y"
     elif not has_history and profile_years >= 5:
         severity = "sparse_history"
-        penalty = 3.0
+        penalty = SPARSE_HISTORY_PENALTY
         note = f"declares {profile_years:.0f}y but career history is sparse/undocumented"
 
     return {

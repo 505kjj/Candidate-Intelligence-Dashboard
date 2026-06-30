@@ -114,3 +114,14 @@ RARE_ELITE_BONUS_CAP = 12.0      # cap on the total elite bonus (career-evidence
 # far from the Pune/NCR hub. Deliberately gated so elite-tier candidates are never
 # demoted for location.
 COMMON_TIER_FAR_DEDUCTION = 4.0
+
+# --- Experience-consistency (data-trust) penalties ------------------------------
+# Final-scale penalties for declared years_of_experience that disagree with the
+# duration documented in career_history. The strong-overclaim case (declares many
+# years but history documents far fewer, e.g. 16y stated vs ~8y documented) is the
+# planted honeypot/data-trust pattern and is penalised hard so the ranker itself
+# keeps such profiles out of the top 100. Named here for easy tuning.
+OVERCLAIM_STRONG_PENALTY = 20.0    # gap >=5y AND declared >= 1.6x documented
+OVERCLAIM_MODERATE_PENALTY = 6.0   # gap >=3y
+UNDERCLAIM_PENALTY = 4.0           # documented exceeds declared by >=2y
+SPARSE_HISTORY_PENALTY = 3.0       # declares >=5y but history is undocumented
