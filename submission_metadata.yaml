@@ -1,63 +1,37 @@
-﻿team_name: "orbitroom"
-
-primary_contact:
-  name: "Khushi Jain"
-  email: "khushi.12760@stu.upes.ac.in"
-  phone: "+91-8586833271"
-
-team_members:
-  - name: "Khushi Jain"
-    email: "khushi.12760@stu.upes.ac.in"
-    role: "Team Lead"
-  - name: "Pratham Bhat"
-    email: "Pratham.11948@stu.upes.ac.in"
-    role: "Builder"
-
-github_repo: "https://github.com/505kjj/Candidate-Intelligence-Dashboard"
-demo_dashboard_link: "https://frontend-pink-nine-73.vercel.app/"
-dashboard_page: "https://frontend-pink-nine-73.vercel.app/dashboard"
-sandbox_link: "https://colab.research.google.com/github/505kjj/Candidate-Intelligence-Dashboard/blob/master/sandbox/run_sandbox.ipynb"
-
-reproduce_command: "python backend/rank.py --candidates ./data/candidates.jsonl --out ./outputs/submission.csv --json ./outputs/top_candidates.json"
-validate_command: "python validate_submission.py ./outputs/submission.csv"
-sandbox_command: "docker build -t candidate-ranker . && docker run --rm candidate-ranker"
-
-generated_outputs:
-  - "submission.csv"
-  - "outputs/submission.csv"
-  - "outputs/top_candidates.json"
-  - "frontend/public/generated/submission.csv"
-  - "frontend/public/generated/top_candidates.json"
-
-vercel_is_demo_only: true
-vercel_note: |
-  The Vercel site is a display-only dashboard/demo.
-  It serves precomputed generated outputs and does not run the Python ranking engine.
-  The ranker runs only via backend/rank.py locally or in Docker.
-
-no_hosted_llm: true
-no_hosted_llm_declaration: |
-  No hosted LLM/API is used during scoring or ranking.
-  No candidate data is sent to OpenAI, Anthropic/Claude, Google Gemini, Cohere, Groq, Together, HuggingFace Inference, or any external model service.
-  Semantic similarity is local scikit-learn TF-IDF.
-  Career-evidence, logistics, behavioral, and trap detection are local deterministic heuristics.
-
-scoring_formula: |
-  Final Score =
-  0.25 semantic match
-  + 0.25 career evidence
-  + 0.15 core skill fit
-  + 0.10 seniority fit
-  + 0.08 product/company fit
-  + 0.10 behavioral signal fit
-  + 0.07 logistics fit
-  - trap/data-quality penalties
-
-declarations:
-  read_submission_spec: true
-  code_is_original_work: true
-  no_collusion: true
-  honeypot_check_done: true
-  reproduction_tested: true
-  no_hosted_llm_used_in_scoring: true
-  ranking_is_cpu_only: true
+warning: in the working copy of 'submission_metadata.yaml', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/submission_metadata.yaml b/submission_metadata.yaml[m
+[1mindex 3d38c32..1006604 100644[m
+[1m--- a/submission_metadata.yaml[m
+[1m+++ b/submission_metadata.yaml[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-team_name: "orbitroom"[m
+[32m+[m[32m﻿team_name: "orbitroom"[m
+ [m
+ primary_contact:[m
+   name: "Khushi Jain"[m
+[36m@@ -53,25 +53,6 @@[m [mscoring_formula: |[m
+   + 0.07 logistics fit[m
+   - trap/data-quality penalties[m
+ [m
+[31m-compute:[m
+[31m-  platform: "Local CPU machine"[m
+[31m-  cpu_cores: 8[m
+[31m-  ram_gb: 16[m
+[31m-  python_version: "3.11"[m
+[31m-  os: "Windows 11 / Linux compatible"[m
+[31m-  uses_gpu_for_inference: false[m
+[31m-  has_network_during_ranking: false[m
+[31m-  pre_computation_required: false[m
+[31m-  pre_computation_time_minutes: 0[m
+[31m-[m
+[31m-ai_tools_used:[m
+[31m-  - "ChatGPT"[m
+[31m-  - "Claude"[m
+[31m-[m
+[31m-ai_usage_summary: |[m
+[31m-  Used AI assistance to scaffold and review code, documentation, and UI structure.[m
+[31m-  No hosted AI APIs are called during ranking and no candidate data is sent to an external model by the submitted ranker.[m
+[31m-[m
+ declarations:[m
+   read_submission_spec: true[m
+   code_is_original_work: true[m
